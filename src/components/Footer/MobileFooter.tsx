@@ -67,7 +67,7 @@ const UpperFooter = () => {
             alt="Pound Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute ml-60 lg:ml-240"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute ml-75 lg:ml-240"
           />
         </div>
 
@@ -91,7 +91,7 @@ const UpperFooter = () => {
         />
 
         <Image
-          src="/vector2.png"
+          src="/vector.png"
           alt=""
           width={400}
           height={400}
