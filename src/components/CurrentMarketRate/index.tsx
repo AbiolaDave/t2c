@@ -290,13 +290,13 @@ const CurrentMarketRate = ({
             className="absolute w-32.25 h-25.75 ml-72 lg:h-75 -mt-5 lg:w-55  lg:ml-250 lg:-mt-10 object-fill z-30"
           />
         </div>
-        <div className="block md:hidden">
+        <div className="relative overflow-hidden w-full">
           <Image
-            src="/vectormid.png"
-            alt="vector"
-            width={400}
-            height={500}
-            className="w-29.75 h-73.75 -mt-30  absolute  z-0"
+            src="/coinhalf.png"
+            alt="coinhalf"
+            width={100}
+            height={100}
+            className="absolute w-32.25 h-25.75 right-0 lg:h-75 -mt-5 lg:w-55 lg:ml-250 lg:-mt-10 object-fill z-30"
           />
         </div>
       </div>
