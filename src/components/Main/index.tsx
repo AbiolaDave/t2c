@@ -6,7 +6,7 @@ const Main = () => {
     <>
       <div
         id="main"
-        className="flex flex-col min-h-screen items-center justify-center overflow-hidden p-4 bg-[#F6FFFC] font-sans -mt-50 lg:-mt-30 lg:pt-40"
+        className="flex flex-col min-h-screen items-center justify-center overflow-hidden p-4 bg-[#F6FFFC] font-sans -mt-70 lg:-mt-30 lg:pt-40"
       >
         <div className="flex justify-between items-center w-full lg:w-272.5">
           <div className="w-49.5 h-[182.41px] -ml-14 lg:w-77.5 lg:h-77.5">
@@ -38,7 +38,7 @@ const Main = () => {
             className="w-49.75 h-103.75 absolute -ml-170.5 mt-12.5 z-0"
           />
         </div>
-        <div className="lg:w-269.5 w-fit px-4 lg:px-0  mt-5 lg:mt-0 flex flex-col gap-2.5">
+        <div className="lg:w-269.5 w-full mt-5 lg:mt-0 flex flex-col gap-2.5">
           <div className="overflow-hidden w-full">
             <div className="flex  gap-2.5 marquee-reverse">
               {[...RatesProviders, ...RatesProviders].map((provider, i) => (
