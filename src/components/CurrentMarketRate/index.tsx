@@ -62,7 +62,7 @@ const CurrentMarketRate = ({
   return (
     <div
       id="main"
-      className="flex flex-col min-h-screen items-center justify-center overflow-hidden p-4 bg-[#F6FFFC] font-sans -ml-8 lg:ml-0 -mt-70 lg:-mt-5 pt-40 "
+      className="flex flex-col min-h-screen items-center justify-center overflow-hidden p-4 bg-[#F6FFFC] font-sans -ml-8 lg:ml-0 -mt-30 lg:-mt-5 pt-40 "
     >
       <div className="flex flex-col lg:flex-row lg:gap-10 justify-between items-center w-272.5">
         <div className="md:ml-0 -ml-30">
@@ -109,7 +109,7 @@ const CurrentMarketRate = ({
                 className={
                   i === 0
                     ? "w-[350px] ml-8 lg:ml-0 h-[73px] lg:w-99.75 lg:h-32.25 mb-5 border rounded-[11.35px] lg:rounded-[20px] bg-[#3CAE8C] border-[#3CAE8C] flex justify-center text-white items-center gap-4"
-                    : "w-[350px] ml-8 lg:ml-0 h-[73px] lg:w-99.75 lg:h-32.25 mb-5 border rounded-[11.35px] lg:rounded-[20px] bg-white border-[#EBEBEB] text-black flex justify-center items-center gap-4"
+                    : "w-[350px] ml-8 -mt-5 lg:ml-0 h-[73px] lg:w-99.75 lg:h-32.25 mb-5 border rounded-[11.35px] lg:rounded-[20px] bg-[#EDF8F5] border-[#EBEBEB] text-black flex justify-center items-center gap-4"
                 }
               >
                 <Image
@@ -287,7 +287,7 @@ const CurrentMarketRate = ({
             alt="coinhalf"
             width={100}
             height={100}
-            className="absolute w-42.25 h-47.75 ml-65 lg:h-75 -mt-10 lg:w-55  lg:ml-250 lg:-mt-10 object-fill z-30"
+            className="absolute w-32.25 h-25.75 ml-72 lg:h-75 -mt-5 lg:w-55  lg:ml-250 lg:-mt-10 object-fill z-30"
           />
         </div>
         <div className="block md:hidden">

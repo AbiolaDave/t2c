@@ -53,7 +53,7 @@ const Hero = () => {
         id="hero"
         className="flex min-h-screen items-center justify-center overflow-hidden p-4 bg-[#F6FFFC] font-sans "
       >
-        <main className="lg:min-h-screen h-175 -mt-40 lg:mt-0 lg:h-213.75 w-full rounded-b-[39px] lg:rounded-[39px] bg-[#121421] overflow-hidden">
+        <main className="lg:min-h-screen h-175  lg:mt-0 lg:h-213.75 w-full rounded-b-[39px] lg:rounded-[39px] bg-[#121421] overflow-hidden">
           {/* Wrap navbar and dropdown in a relative container */}
           <div className="relative">
             <div className="flex justify-around md:justify-evenly lg:justify-evenly items-center w-full h-15 mt-10 font-sunflower">
