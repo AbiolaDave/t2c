@@ -172,7 +172,7 @@ const Hero = () => {
                 <button
                   type="submit"
                   onClick={() => formik.handleSubmit()}
-                  className="bg-[#3CAE8C] text-white w-[113.9px] h-[43.96px] lg:w-[137.15px] lg:h-[52.94px] rounded-[100%] z-50 cursor-pointer rotation-[3.04deg] px-2"
+                  className="bg-[#3CAE8C] text-white w-[113.9px] h-[43.96px] lg:w-[137.15px] lg:h-[52.94px] rounded-[100%] z-30 cursor-pointer rotation-[3.04deg] px-2"
                 >
                   <h1 className="text-white text-[13.99px] lg:text-[16.84px] font-light">
                     Compare Rates
