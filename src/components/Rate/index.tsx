@@ -82,7 +82,7 @@ const Rate = () => {
           alt="coinhalf"
           width={100}
           height={100}
-          className="absolute w-32.25 h-25.75 ml-72 lg:h-75 -mt-5 lg:w-55  lg:ml-250 lg:-mt-10 object-fill z-30"
+          className="absolute w-32.25 h-25.75 ml-72 lg:h-75 -mt-5 lg:w-55  lg:ml-250 lg:-mt-10 object-fill overflow-hidden z-30"
         />
       </div>
     </div>
