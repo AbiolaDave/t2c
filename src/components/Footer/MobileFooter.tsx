@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
-const UpperFooter = () => {
+const MobileFooter = () => {
   return (
     <>
       {/* ===================== UPPER FOOTER (ORIGINAL – FULLY RESTORED) ===================== */}
-      <div className="overflow-hidden w-fit h-140 lg:h-235.5 bg-black p-4 -mt-40 font-sans">
+      <div className="relative overflow-hidden w-full h-140 lg:h-235.5 bg-black p-4 -mt-40 font-sans">
         <div>
           <Image
             src="/euro.png"
@@ -46,28 +46,28 @@ const UpperFooter = () => {
             alt="Euro Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute ml-90 lg:ml-250"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute right-2 lg:right-16"
           />
           <Image
             src="/dollar.png"
             alt="Dollar Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute ml-85 lg:ml-300"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute right-6 lg:right-4"
           />
           <Image
             src="/yen.png"
             alt="Yen Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute ml-85 lg:ml-280"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute right-6 lg:right-10"
           />
           <Image
             src="/pound.png"
             alt="Pound Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute ml-90 lg:ml-240"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute right-2 lg:right-20"
           />
         </div>
 
@@ -294,4 +294,4 @@ const UpperFooter = () => {
   );
 };
 
-export default UpperFooter;
+export default MobileFooter;

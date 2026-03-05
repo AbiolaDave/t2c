@@ -7,7 +7,7 @@ import Image from "next/image";
 const UpperFooter = () => {
   return (
     <>
-      <div className="overflow-hidden h-140 lg:h-235.5 bg-black  p-4 font-sans ">
+      <div className="relative overflow-hidden h-140 lg:h-235.5 bg-black p-4 font-sans">
         <div>
           <Image
             src="/euro.png"
@@ -44,7 +44,7 @@ const UpperFooter = () => {
             alt="Euro Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute ml-90 lg:ml-250"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute ml-90 lg:ml-250 z-10"
           />
 
           <Image
@@ -52,62 +52,65 @@ const UpperFooter = () => {
             alt="Dollar Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute ml-85 lg:ml-300"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute ml-85 lg:ml-300 z-10"
           />
           <Image
             src="/yen.png"
             alt="Yen Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute ml-90 lg:ml-280"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute ml-90 lg:ml-280 z-10"
           />
           <Image
             src="/pound.png"
             alt="Pound Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute ml-80 lg:ml-240"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute ml-80 lg:ml-240 z-10"
           />
         </div>
         <div className="w-166.25 h-82.25 mx-auto mt-40 lg:mt-70 z-30">
           <div className="">
-            <h1 className="font-sunflower font-medium ml-14 lg:ml-0 text-[40px]/[43.75px] lg:text-[76px]/[77px] text-center text-white max-w-70  lg:max-w-169.25">
+            <h1 className="relative z-10 font-sunflower font-medium ml-14 lg:ml-0 text-[40px]/[43.75px] lg:text-[76px]/[77px] text-center text-white max-w-70  lg:max-w-169.25">
               {" "}
               Every Currency Rate In One Place
             </h1>
-            <p className="font-inter font-normal text-[12px]/[15.05px] lg:text-[19px]/[27px] text-center text-[#8F8F8F] max-w-60 ml-18 lg:ml-0  lg:max-w-127 mx-auto relative z-30">
+            <p className="font-inter font-normal text-[12px]/[15.05px] lg:text-[19px]/[27px] text-center text-[#8F8F8F] max-w-60 ml-18 lg:ml-20  lg:max-w-127 mx-auto relative z-30">
               Information overload is a thing of the past. We aggregate the
               latest market data and project updates so you can focus on making
               informed decisions without the clutter.
             </p>
           </div>
         </div>
-        <div>
+        {/* Replace your three vector divs with these */}
+
+        {/* Vector 1 - bottom left */}
+        <div className="absolute bottom-50 -left-20 w-[108.35px] h-[181.02px] lg:w-[518px] lg:h-[551px] z-0">
           <Image
             src="/vector.png"
             alt="vector"
-            width={400}
-            height={400}
-            className="w-[108.35px] h-[181.02px] relative z-0 lg:w-129.5 lg:h-137.75 lg:-mt-120.5 -mt-100 -ml-4 lg:-ml-6"
+            fill
+            className="object-contain"
           />
         </div>
 
-        <div className="-z-30">
-          <Image
-            src="/vector2.png"
-            alt="vector"
-            width={400}
-            height={400}
-            className="w-[108.35px] h-[181.02px] lg:w-129.5 lg:h-137.75 mt-5 lg:-mt-50.5 ml-40 lg:ml-90 z-0 relative"
-          />
-        </div>
-        <div>
+        {/* Vector 2 - bottom center */}
+        <div className="absolute -bottom-10 left-80 lg:left-140 w-[108.35px] h-[181.02px] lg:w-[518px] lg:h-[551px] z-0">
           <Image
             src="/vector.png"
             alt="vector"
-            width={400}
-            height={400}
-            className="w-[108.35px] h-[181.02px]  lg:w-129.5 lg:h-137.75 -mt-90 lg:-mt-120.5 ml-80 lg:ml-300"
+            fill
+            className="object-contain"
+          />
+        </div>
+
+        {/* Vector 3 - bottom right */}
+        <div className="absolute bottom-20 -right-60 w-[108.35px] h-[181.02px] lg:w-[518px] lg:h-[551px] z-0">
+          <Image
+            src="/vector.png"
+            alt="vector"
+            fill
+            className="object-contain"
           />
         </div>
       </div>

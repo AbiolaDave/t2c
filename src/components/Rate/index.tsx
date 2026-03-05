@@ -77,7 +77,7 @@ const Rate = () => {
         </div>
       </div>
 
-      <div className="mt-15">
+      <div className="mt-15 lg:mt-53">
         <Image
           src="/coinhalf.png"
           alt="coinhalf"
