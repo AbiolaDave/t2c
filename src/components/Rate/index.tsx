@@ -16,7 +16,7 @@ const Rate = () => {
   };
 
   return (
-    <div className="overflow-hidden p-4 ml-2 lg:ml-32 lg:mt-30 font-sans">
+    <div className="relative overflow-hidden p-4 ml-2 lg:ml-32 lg:mt-30 font-sans">
       <div className="text-start">
         <h1 className="font-sunflower text-[#3CAE8C] font-light text-[40px]/[38.16px] lg:text-[71px]/[67px] max-w-80 lg:max-w-125">
           Track Exchange <span className="text-[#6F6F6F]">Rate Trends</span>
@@ -76,13 +76,14 @@ const Rate = () => {
           </div>
         </div>
       </div>
-      <div className="overflow-hidden w-full">
+
+      <div className="mt-15">
         <Image
           src="/coinhalf.png"
           alt="coinhalf"
           width={100}
           height={100}
-          className="absolute w-32.25 h-21.75 ml-69 lg:h-75 -mt-5 lg:w-55  lg:ml-250 lg:-mt-10 object-fill z-30"
+          className="absolute right-0 bottom-0 w-22.25 h-25.75 lg:h-75 lg:w-55 object-fill z-30"
         />
       </div>
     </div>
