@@ -46,28 +46,28 @@ const UpperFooter = () => {
             alt="Euro Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute ml-80 lg:ml-250"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute ml-90 lg:ml-250"
           />
           <Image
             src="/dollar.png"
             alt="Dollar Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute ml-78 lg:ml-300"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute ml-85 lg:ml-300"
           />
           <Image
             src="/yen.png"
             alt="Yen Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute ml-80 lg:ml-280"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute ml-85 lg:ml-280"
           />
           <Image
             src="/pound.png"
             alt="Pound Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute ml-75 lg:ml-240"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute ml-90 lg:ml-240"
           />
         </div>
 
