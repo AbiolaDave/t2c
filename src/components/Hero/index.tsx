@@ -53,7 +53,7 @@ const Hero = () => {
         id="hero"
         className="flex min-h-screen items-center justify-center overflow-hidden p-4 bg-[#F6FFFC] font-sans "
       >
-        <main className="lg:min-h-screen h-175  lg:mt-0 lg:h-213.75 w-full rounded-b-[39px] lg:rounded-[39px] bg-[#121421] overflow-hidden">
+        <main className="lg:min-h-screen h-175  lg:mt-0 lg:h-213.75 w-full rounded-b-[20.96px] lg:rounded-[39px] bg-[#121421] overflow-hidden">
           {/* Wrap navbar and dropdown in a relative container */}
           <div className="relative">
             <div className="flex justify-around md:justify-evenly lg:justify-evenly items-center w-full h-15 mt-10 font-sunflower">
@@ -119,7 +119,7 @@ const Hero = () => {
           </div>
           <div className="relative isolate">
             <div className="absolute -ml-30 lg:ml-3.25 mt-8 rounded-[100%] bg-[#3CAE8C]  w-61.25 h-61.25 blur-3xl z-0"></div>
-            <div className="relative z-30 w-79.75 h-76.5 lg:w-251.25 lg:h-60.5 -mt-25 lg:mt-10 border-4 rounded-4xl mx-auto  border-[#3CAE8C] flex flex-col pt-5 lg:pt-0">
+            <div className="relative z-30 w-79.75 h-76.5 lg:w-251.25 lg:h-60.5 -mt-25 lg:mt-10 border-2 lg:border-4 rounded-[16.68px] lg:rounded-4xl mx-auto  border-[#3CAE8C] flex flex-col pt-5 lg:pt-0">
               <div className="flex flex-col lg:flex-row justify-start lg:justify-around items-center h-full">
                 <div className="flex flex-col -ml-12 lg:ml-0 lg:flex-row lg:gap-18">
                   <div>
