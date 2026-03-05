@@ -15,14 +15,14 @@ const UpperFooter = () => {
             alt="Euro Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-10 lg:mt-20.25 absolute ml-14 lg:ml-39.25 z-10"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-10 lg:mt-20.25 absolute ml-7 lg:ml-39.25 z-10"
           />
           <Image
             src="/pound.png"
             alt="Pound Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20 lg:mt-30.25 absolute ml-8 lg:ml-12 z-20"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20 lg:mt-30.25 absolute ml-4 lg:ml-12 z-20"
           />
           <Image
             src="/dollar.png"
@@ -36,7 +36,7 @@ const UpperFooter = () => {
             alt="Naira Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-45 lg:mt-90.25 absolute ml-2 lg:ml-39.25 z-40"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-45 lg:mt-90.25 absolute ml-0 lg:ml-39.25 z-40"
           />
         </div>
 
@@ -46,32 +46,32 @@ const UpperFooter = () => {
             alt="Euro Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute ml-90 lg:ml-250"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute ml-80 lg:ml-250"
           />
           <Image
             src="/dollar.png"
             alt="Dollar Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute ml-85 lg:ml-300"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute ml-75 lg:ml-300"
           />
           <Image
             src="/yen.png"
             alt="Yen Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute ml-90 lg:ml-280"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute ml-80 lg:ml-280"
           />
           <Image
             src="/pound.png"
             alt="Pound Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute ml-80 lg:ml-240"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute ml-60 lg:ml-240"
           />
         </div>
 
-        <div className="w-166.25 h-82.25 mx-auto mt-40 lg:mt-70 z-30">
+        <div className="w-166.25 h-82.25 mx-auto mt-30 lg:mt-70 z-30">
           <h1 className="font-sunflower font-medium ml-14 lg:ml-0 text-[40px]/[43.75px] lg:text-[76px]/[77px] text-center text-white max-w-70 lg:max-w-169.25">
             Every Currency Rate In One Place
           </h1>
@@ -84,7 +84,7 @@ const UpperFooter = () => {
 
         <Image
           src="/vector.png"
-          alt="vector"
+          alt=""
           width={400}
           height={400}
           className="w-[108.35px] h-[181.02px] lg:w-129.5 lg:h-137.75 lg:-mt-120.5 -mt-100 -ml-4 lg:-ml-6"
@@ -92,7 +92,7 @@ const UpperFooter = () => {
 
         <Image
           src="/vector2.png"
-          alt="vector"
+          alt=""
           width={400}
           height={400}
           className="w-[108.35px] h-[181.02px] lg:w-129.5 lg:h-137.75 mt-5 lg:-mt-50.5 ml-40 lg:ml-90"
@@ -100,7 +100,7 @@ const UpperFooter = () => {
 
         <Image
           src="/vector.png"
-          alt="vector"
+          alt=""
           width={400}
           height={400}
           className="w-[108.35px] h-[181.02px] lg:w-129.5 lg:h-137.75 -mt-90 lg:-mt-120.5 ml-80 lg:ml-300"
@@ -109,7 +109,7 @@ const UpperFooter = () => {
 
       {/* ===================== LOWER FOOTER (IMPROVED) ===================== */}
       <div className="w-full bg-black">
-        <div className="flex justify-between mb-5 px-6 lg:px-0 max-w-7xl ">
+        <div className="flex justify-between mb-5 px-3 lg:px-0 max-w-7xl ">
           {/* LEFT */}
           <div className="flex flex-col gap-10">
             <div>
@@ -144,11 +144,11 @@ const UpperFooter = () => {
             </p>
 
             <div className="flex bg-white rounded-md overflow-hidden">
-              <p className="px-5 py-2 text-[#0A142F] text-[13px]">
+              <p className="px-2 py-2 text-[#0A142F] text-[13px]">
                 Get Rate updates
               </p>
-              <div className="bg-[#3CAE8C] px-4 flex items-center text-white">
-                <ArrowRight size={22} />
+              <div className="bg-[#3CAE8C] px-2 flex items-center text-white">
+                <ArrowRight size={26} />
               </div>
             </div>
 
