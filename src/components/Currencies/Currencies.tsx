@@ -88,7 +88,7 @@ export function CurrencySelect({ value, options, onChange }: Props) {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="w-[293.32px] h-[45.21px] lg:w-[297.13px] lg:h-19 bg-white border border-[#3CAE8C] rounded-[15px] px-4 flex items-center justify-between"
+        className="w-[293.32px] h-[45.21px] lg:w-[297.13px] lg:h-19 bg-white border border-[#3CAE8C] rounded-[8.17px] lg:rounded-[15px] px-4 flex items-center justify-between"
       >
         <div className="flex items-center gap-3">
           <Image
