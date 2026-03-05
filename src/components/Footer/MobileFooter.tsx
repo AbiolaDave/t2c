@@ -53,7 +53,7 @@ const UpperFooter = () => {
             alt="Dollar Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute ml-75 lg:ml-300"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute ml-78 lg:ml-300"
           />
           <Image
             src="/yen.png"
