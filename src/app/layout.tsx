@@ -1,16 +1,15 @@
+import Footer from "@/components/Footer/Footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import {
   Cedarville_Cursive,
   Geist,
   Geist_Mono,
   Inter,
   Roboto,
+  Sunflower,
 } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer/Footer";
-import type { Viewport } from "next";
-import { Sunflower } from "next/font/google";
 
 const sunflower = Sunflower({
   weight: ["300", "500", "700"],

@@ -8,7 +8,7 @@ const UpperFooter = () => {
   return (
     <>
       {/* ===================== UPPER FOOTER (ORIGINAL – FULLY RESTORED) ===================== */}
-      <div className="overflow-hidden h-140 lg:h-235.5 bg-black p-4 -mt-40 font-sans">
+      <div className="overflow-hidden w-fit h-140 lg:h-235.5 bg-black p-4 -mt-40 font-sans">
         <div>
           <Image
             src="/euro.png"
