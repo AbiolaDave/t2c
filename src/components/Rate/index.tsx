@@ -76,7 +76,7 @@ const Rate = () => {
           </div>
         </div>
       </div>
-      <div className="overflow-hidden w-full">
+      <div className="absolute overflow-hidden w-full">
         <Image
           src="/coinhalf.png"
           alt="coinhalf"

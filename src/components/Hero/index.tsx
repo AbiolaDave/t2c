@@ -162,8 +162,8 @@ const Hero = () => {
                     onBlur={formik.handleBlur}
                     className={
                       formik.errors.amount && formik.touched.amount
-                        ? "w-[293.32px] h-[45.21px]  lg:w-[297.13px] lg:h-19 bg-red-100 rounded-[15px] border border-[#3CAE8C] px-4 flex items-center justify-between text-black font-sunflower font-bold text-[23px] hover:bg-gray-50 transition-colors"
-                        : "w-[293.32px] h-[45.21px]  lg:w-[297.13px] lg:h-19 bg-white border border-[#3CAE8C] rounded-[15px] px-4 flex items-center justify-between text-black font-sunflower font-bold text-[23px] hover:bg-gray-50 transition-colors"
+                        ? "w-[293.32px] h-[45.21px]  lg:w-[297.13px] lg:h-19 rounded-[8.17px] bg-red-100  lg:rounded-[15px] border border-[#3CAE8C] px-4 flex items-center justify-between text-black font-sunflower font-bold text-[23px] hover:bg-gray-50 transition-colors"
+                        : "w-[293.32px] h-[45.21px]  lg:w-[297.13px] lg:h-19 bg-white border border-[#3CAE8C] rounded-[8.17px] lg:rounded-[15px] px-4 flex items-center justify-between text-black font-sunflower font-bold text-[23px] hover:bg-gray-50 transition-colors"
                     }
                   />
                 </div>
