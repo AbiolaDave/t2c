@@ -62,7 +62,7 @@ const CurrentMarketRate = ({
   return (
     <div
       id="main"
-      className="flex flex-col min-h-screen items-center justify-center overflow-hidden p-4 bg-[#F6FFFC] font-sans -ml-8 lg:ml-0 -mt-30 lg:-mt-5 pt-40 "
+      className="flex flex-col min-h-screen items-center justify-center overflow-hidden! p-4 bg-[#F6FFFC] font-sans -ml-8 lg:ml-0 -mt-30 lg:-mt-5 pt-40 "
     >
       <div className="flex flex-col lg:flex-row lg:gap-10 justify-between items-center w-272.5">
         <div className="md:ml-0 -ml-30">
@@ -281,7 +281,7 @@ const CurrentMarketRate = ({
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden w-full">
+        <div className="relative overflow-hidden! w-full">
           <Image
             src="/coinhalf.png"
             alt="coinhalf"
