@@ -119,8 +119,8 @@ export default function TrackRateModal({
   if (!isOpen) return null;
 
   return (
-    <div className="inset-0 z-50 flex ml-0 md:ml-0 mt-50 md:mt-0 items-center justify-center bg-black/50">
-      <div className="relative w-[350px] md:w-full max-w-md rounded-2xl bg-white p-6 shadow-xl">
+    <div className="fixed inset-0 z-50 flex items-start md:items-center justify-center bg-black/50 overflow-y-auto p-4">
+      <div className="relative w-[350px] md:w-full max-w-md rounded-2xl bg-white p-6 shadow-xl my-auto">
         <button
           onClick={onClose}
           className="absolute right-4 top-4 text-gray-400 hover:text-gray-600"
