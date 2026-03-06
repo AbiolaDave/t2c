@@ -43,7 +43,7 @@ const Rate = () => {
           </div>
         </div>
 
-        <div className=" lg:w-73.25 lg:h-100.5 border border-[#E1E7EF80] rounded-[8.6px] lg:rounded-[15px] bg-white flex flex-col overflow-y-scroll px-5  py-5 gap-2.5">
+        <div className=" lg:w-73.25 lg:h-100.5 border border-[#E1E7EF80] rounded-[8.6px] lg:rounded-[15px] bg-white flex flex-col overflow-y-auto custom-scroll px-5  py-5 gap-2.5">
           <h1 className="lg:text-[18px] sticky left-1 text-[#0F1729] font-sunflower font-bold text-[16px]">
             All Providers
           </h1>

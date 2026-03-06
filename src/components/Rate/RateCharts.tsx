@@ -32,6 +32,7 @@ const GREEN = "#3CAE8C";
 export default function RateChart() {
   const containerRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
+  const yAxisRef = useRef<SVGSVGElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
 
@@ -66,10 +67,14 @@ export default function RateChart() {
 
   // Draw chart whenever height changes
   useEffect(() => {
-    if (!height || !svgRef.current) return;
+    if (!height || !svgRef.current || !yAxisRef.current) return;
 
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
+
+    // NEW: draw fixed Y-axis labels in a separate SVG
+    const yAxisSvg = d3.select(yAxisRef.current);
+    yAxisSvg.selectAll("*").remove();
 
     const innerW = data.length * PX_PER_POINT;
     const innerH = height - MARGIN.top - MARGIN.bottom;
@@ -77,9 +82,10 @@ export default function RateChart() {
 
     svg.attr("width", totalW).attr("height", height);
 
+    // NEW: size the fixed Y-axis SVG to match just the left margin
+    yAxisSvg.attr("width", MARGIN.left).attr("height", height);
     const minVal = d3.min(data, (d) => d.value)!;
     const maxVal = d3.max(data, (d) => d.value)!;
-
     const yScale = d3
       .scaleLinear()
       .domain([minVal - 2, maxVal + 2])
@@ -115,7 +121,7 @@ export default function RateChart() {
       .attr("stop-color", GREEN)
       .attr("stop-opacity", 0.01);
 
-    // Y gridlines
+    // Y gridlines (still inside scrollable SVG)
     const yTicks = yScale.ticks(TICK_COUNT);
     g.selectAll(".grid-line")
       .data(yTicks)
@@ -129,13 +135,18 @@ export default function RateChart() {
       .attr("stroke", "#e2e8f0")
       .attr("stroke-width", 1);
 
-    // Y axis labels (drawn in the left margin)
-    g.selectAll(".y-label")
+    // NEW: Y-axis labels drawn in the fixed overlay SVG instead
+    const yAxisG = yAxisSvg
+      .append("g")
+      .attr("transform", `translate(0,${MARGIN.top})`);
+
+    yAxisG
+      .selectAll(".y-label")
       .data(yTicks)
       .enter()
       .append("text")
       .attr("class", "y-label")
-      .attr("x", -8)
+      .attr("x", MARGIN.left - 8)
       .attr("y", (d) => yScale(d))
       .attr("dy", "0.35em")
       .attr("text-anchor", "end")
@@ -144,6 +155,7 @@ export default function RateChart() {
       .text((d) => `₦${d.toLocaleString()}`);
 
     // Area
+
     const areaGen = d3
       .area<(typeof data)[0]>()
       .x((d) => xScale(d.date)!)
@@ -186,8 +198,6 @@ export default function RateChart() {
     // Tooltip overlay
     const tooltip = d3.select(tooltipRef.current);
 
-    const bisect = d3.bisector((d: (typeof data)[0]) => d.date).left;
-
     // Vertical hover line
     const hoverLine = g
       .append("line")
@@ -220,8 +230,6 @@ export default function RateChart() {
       .attr("fill", "transparent")
       .on("mousemove", function (event) {
         const [mx] = d3.pointer(event);
-        // Find nearest data point
-        const step = innerW / (data.length - 1 + 1); // approx step
         const points = data.map((d) => ({ d, x: xScale(d.date)! }));
         const nearest = points.reduce((prev, curr) =>
           Math.abs(curr.x - mx) < Math.abs(prev.x - mx) ? curr : prev,
@@ -235,7 +243,6 @@ export default function RateChart() {
           .attr("transform", `translate(${x},${y})`)
           .style("display", null);
 
-        // Position tooltip relative to scroll container
         const scrollEl = scrollRef.current!;
         const svgRect = svgRef.current!.getBoundingClientRect();
         const scrollRect = scrollEl.getBoundingClientRect();
@@ -262,23 +269,15 @@ export default function RateChart() {
   return (
     <>
       <style>{`
-  .rate-scroll { overflow-x: scroll; scrollbar-width: thin; scrollbar-color: #cbd5e1 #f1f5f9; }
-  .rate-scroll::-webkit-scrollbar { height: 4px; display: block; }
-  .rate-scroll::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 9999px; }
-  .rate-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
-  .rate-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-`}</style>
+        .rate-scroll { overflow-x: scroll; scrollbar-width: thin; scrollbar-color: #cbd5e1 #f1f5f9; }
+        .rate-scroll::-webkit-scrollbar { height: 4px; display: block; }
+        .rate-scroll::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 9999px; }
+        .rate-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+        .rate-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+      `}</style>
 
       <div ref={containerRef} className="relative h-full w-full">
-        {/* Fade edges */}
-        {!atStart && (
-          <div
-            className="pointer-events-none absolute left-[48px] top-0 z-10 h-full w-8"
-            style={{
-              background: "linear-gradient(to right, white, transparent)",
-            }}
-          />
-        )}
+        {/* Fade edge — right side only now (left is covered by fixed axis) */}
         {!atEnd && (
           <div
             className="pointer-events-none absolute right-0 top-0 z-10 h-full w-8"
@@ -294,13 +293,21 @@ export default function RateChart() {
           className="pointer-events-none absolute z-20 hidden rounded-lg border border-white/10 bg-[#0f172a] px-3 py-2 shadow-lg"
         />
 
-        {/* Scrollable area — starts after the Y-axis margin */}
+        {/* Scrollable chart area */}
         <div
           ref={scrollRef}
           className="rate-scroll absolute inset-0 overflow-x-scroll overflow-y-hidden"
+          style={{ paddingLeft: 0 }}
         >
           <svg ref={svgRef} style={{ display: "block" }} />
         </div>
+
+        {/* NEW: Fixed Y-axis overlay — sits on top of the left margin, never scrolls */}
+        <svg
+          ref={yAxisRef}
+          className="pointer-events-none absolute left-0 top-0 z-10"
+          style={{ background: "white" }}
+        />
       </div>
     </>
   );
