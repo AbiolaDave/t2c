@@ -38,7 +38,7 @@ const Main = () => {
             className="w-49.75 h-103.75 absolute -ml-170.5 mt-12.5 z-0"
           />
         </div>
-        <div className="lg:w-269.5 w-full mt-5 lg:mt-0 flex flex-col gap-2.5">
+        <div className="lg:w-269.5 w-full px-5 md:px-0 mt-5 lg:mt-0 flex flex-col gap-2.5">
           <div className="overflow-hidden w-full">
             <div className="flex  gap-2.5 marquee-reverse">
               {[...RatesProviders, ...RatesProviders].map((provider, i) => (

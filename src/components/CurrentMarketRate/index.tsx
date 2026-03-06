@@ -65,14 +65,14 @@ const CurrentMarketRate = ({
       className="flex flex-col min-h-screen items-center justify-center overflow-hidden! p-4 bg-[#F6FFFC] font-sans -ml-8 lg:ml-0 -mt-30 lg:-mt-5 pt-40 "
     >
       <div className="flex flex-col lg:flex-row lg:gap-10 justify-between items-center w-272.5">
-        <div className="md:ml-0 -ml-30">
+        <div className="md:ml-0 -ml-20">
           <h1 className="text-[27.24px]/[24.97px] lg:text-[48px]/[44px] font-light font-sunflower max-w-[170px] lg:max-w-69.75 text-[#0F1729]">
             Current Market Rates
           </h1>
           <p className="font-inter font-medium text-[14px] text-[#94A3B8] mt-5">
             Amount to Send
           </p>
-          <div className="relative w-50 md:w-70.25 mt-3 h-15 md:h-20">
+          <div className="relative w-60 md:w-70.25 mt-3 h-15 md:h-20">
             {/* Styled display */}
             <div className="pointer-events-none absolute inset-0 flex justify-between items-center px-5">
               <div>
@@ -214,7 +214,7 @@ const CurrentMarketRate = ({
         />
       </div>
 
-      <div className="min-h-screen w-screen lg:w-fit overflow-hidden mt-10 lg:mt-20 p-4  ml-7 md:ml-12 font-sans">
+      <div className="min-h-screen w-screen lg:w-fit overflow-hidden mt-10 lg:mt-20 p-4  ml-8 md:ml-12 font-sans">
         <div className="text-start">
           <h1 className="font-sunflower text-[#0F1729] font-light text-[40px]/[38.16px]  lg:text-[71px]/[67px] max-w-125">
             Trends

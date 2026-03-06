@@ -16,14 +16,14 @@ const Rate = () => {
   };
 
   return (
-    <div className="relative overflow-hidden p-4 ml-2 lg:ml-32 lg:mt-30 font-sans">
+    <div className="relative overflow-hidden bg-[#F6FFFC] mt-10 p-4 ml-2 lg:ml-32 lg:mt-30 font-sans">
       <div className="text-start">
         <h1 className="font-sunflower text-[#3CAE8C] font-light text-[40px]/[38.16px] lg:text-[71px]/[67px] max-w-80 lg:max-w-125">
           Track Exchange <span className="text-[#6F6F6F]">Rate Trends</span>
         </h1>
       </div>
 
-      <div className="flex flex-col-reverse lg:flex-row gap-10 mt-10">
+      <div className="flex flex-col-reverse lg:flex-row gap-10 mt-5">
         <div className="lg:w-187 lg:h-100.5 rounded-[14px] bg-white border border-[#E1E7EF80] p-4">
           <div className="flex items-center">
             <Image
@@ -43,8 +43,8 @@ const Rate = () => {
           </div>
         </div>
 
-        <div className=" lg:w-73.25 lg:h-100.5 border border-[#E1E7EF80] rounded-[8.6px] lg:rounded-[15px] bg-white flex flex-col overflow-y-auto px-5  py-5 gap-2.5">
-          <h1 className="lg:text-[18px] sticky left-5 text-[#0F1729] font-sunflower font-bold text-[16px]">
+        <div className=" lg:w-73.25 lg:h-100.5 border border-[#E1E7EF80] rounded-[8.6px] lg:rounded-[15px] bg-white flex flex-col overflow-y-scroll px-5  py-5 gap-2.5">
+          <h1 className="lg:text-[18px] sticky left-1 text-[#0F1729] font-sunflower font-bold text-[16px]">
             All Providers
           </h1>
           <div className="flex flex-row lg:flex-col gap-2.5  items-center">

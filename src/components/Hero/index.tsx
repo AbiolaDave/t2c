@@ -53,7 +53,7 @@ const Hero = () => {
         id="hero"
         className="flex items-center justify-center overflow-hidden p-4 bg-[#F6FFFC] font-sans "
       >
-        <main className="lg:min-h-screen h-175 mt-10  lg:mt-0 lg:h-213.75 w-full rounded-b-[20.96px] lg:rounded-[39px] bg-[#121421] overflow-hidden">
+        <main className="lg:min-h-screen h-175 mt-10  lg:mt-0 lg:h-213.75 w-full rounded-[20.96px] lg:rounded-[39px] bg-[#121421] overflow-hidden">
           {/* Wrap navbar and dropdown in a relative container */}
           <div className="relative">
             <div className="flex justify-around md:justify-evenly lg:justify-evenly items-center w-full h-15 mt-10 font-sunflower">
@@ -100,9 +100,10 @@ const Hero = () => {
               </div>
             )}
           </div>
-          <div className="w-full mt-30  flex items-center gap-5 lg:gap-10">
+          <div className="w-full mt-30  flex items-center gap-5 lg:gap-10 ">
+            <div className="block md:hidden border rounded-[100%] -mt-50 bg-[#3CAE8C] w-61.25 h-61.25 blur-3xl -mx-33 z-0"></div>
             <div>
-              <div className="rounded-[100%] -mx-50  md:-mx-30 border bg-[#3CAE8C] w-61.25 h-61.25 blur-3xl"></div>
+              <div className="rounded-[100%] -mx-50  md:block md:-mx-30 border lg:bg-[#3CAE8C] w-61.25 h-61.25 blur-3xl"></div>
             </div>
             <div className="-mt-50 lg:mt-0 ml-3 lg:ml-25 relative z-30">
               <h1 className="font-light text-[40px]/[40px] md:text-[75px]/[75px] lg:text-[75px]/[75px] font-sunflower  text-[#F8FAFC] max-w-75 lg:max-w-4xl">
