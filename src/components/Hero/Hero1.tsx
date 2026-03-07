@@ -107,7 +107,7 @@ const Hero1 = () => {
           <div className="relative isolate">
             <div className="absolute -ml-30 lg:ml-3.25 mt-8 rounded-[100%] bg-[#3CAE8C]  w-61.25 h-61.25 blur-3xl z-0"></div>
             <div className="max-w-[1280px] mx-auto px-6 lg:px-10 z-30 relative mt-10 lg:mt-30">
-              <div className=" max-w-89.75 h-76.5 md:max-w-full lg:w-251.25 lg:max-w-full lg:h-60.5 border-2 lg:border-4 rounded-[16.68px] lg:rounded-4xl   border-[#3CAE8C] flex flex-col pt-5 lg:pt-0 mx-auto">
+              <div className=" max-w-89.75 h-76.5 md:max-w-full lg:w-251.25 lg:max-w-full lg:h-60.5 border-2 lg:border-4 rounded-[16.68px] lg:rounded-4xl   border-[#3CAE8C] flex flex-col pt-5 lg:pt-0 ">
                 <div className="flex flex-col lg:flex-row justify-start lg:justify-around items-center md:items-start lg:items-center h-full">
                   <div className="flex flex-col -ml-12 md:ml-10 lg:ml-0 lg:flex-row lg:gap-18">
                     <div>
