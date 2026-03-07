@@ -44,7 +44,7 @@ const UpperFooter = () => {
             alt="Euro Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute ml-90 lg:ml-250 z-10 xl:ml-350"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute ml-90 md:right-50 z-10 xl:ml-320"
           />
 
           <Image
@@ -52,30 +52,30 @@ const UpperFooter = () => {
             alt="Dollar Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute ml-85 lg:ml-300 z-10 xl:ml-370"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute ml-85 md:right-20 z-10 xl:ml-330"
           />
           <Image
             src="/yen.png"
             alt="Yen Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute ml-90 lg:ml-280 z-10 xl:ml-350"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute ml-90 md:right-20 z-10 xl:ml-320"
           />
           <Image
             src="/pound.png"
             alt="Pound Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute ml-80 lg:ml-240 z-10 xl:ml-300"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute ml-80 md:right-50 z-10"
           />
         </div>
-        <div className="w-166.25 h-82.25 mx-auto mt-40 lg:mt-70 z-30">
-          <div className="">
-            <h1 className="relative z-10 font-sunflower font-medium ml-14 lg:ml-0 text-[40px]/[43.75px] lg:text-[76px]/[77px] text-center text-white max-w-70  lg:max-w-169.25">
+        <div className="w-full  h-82.25 mx-auto mt-40 lg:mt-70 z-30">
+          <div className="mx-auto">
+            <h1 className="relative z-10 font-sunflower font-medium  text-[40px]/[43.75px] md:text-[56px]/[57px] mx-auto text-center text-white max-w-70  md:max-w-169.25">
               {" "}
               Every Currency Rate In One Place
             </h1>
-            <p className="font-inter font-normal text-[12px]/[15.05px] lg:text-[19px]/[27px] text-center text-[#8F8F8F] max-w-60 ml-18 lg:ml-20  lg:max-w-127 mx-auto relative z-30">
+            <p className="font-inter font-normal text-[12px]/[15.05px] md:text-[19px]/[27px] text-center text-[#8F8F8F] max-w-60   md:max-w-127 mx-auto relative z-30">
               Information overload is a thing of the past. We aggregate the
               latest market data and project updates so you can focus on making
               informed decisions without the clutter.
@@ -150,7 +150,7 @@ const UpperFooter = () => {
               <p className="font-sunflower font-medium text-[13px] ml-5 lg:text-[14px] text-[#0A142F]">
                 Get Update
               </p>
-              <div className="w-8  lg:w-11.75 h-11.75 bg-[#3CAE8C] rounded-r-md float-end flex text-white items-center justify-center">
+              <div className="w-8  lg:w-11.75 lg:h-11.75 bg-[#3CAE8C] rounded-r-md float-end flex text-white items-center justify-center">
                 <ArrowRight size={30} />
               </div>
             </div>

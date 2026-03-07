@@ -109,7 +109,7 @@ const CurrentMarketRate = ({
                 className={
                   i === 0
                     ? "w-[350px] ml-8 lg:ml-0 h-[73px] lg:w-99.75 lg:h-32.25 mb-5 border rounded-[11.35px] lg:rounded-[20px] bg-[#3CAE8C] border-[#3CAE8C] flex justify-center text-white items-center gap-4"
-                    : "w-[350px] ml-8 -mt-5 lg:ml-0 h-[73px] lg:w-99.75 lg:h-32.25 mb-5 border rounded-[11.35px] lg:rounded-[20px] bg-[#EDF8F5] border-[#EBEBEB] text-black flex justify-center items-center gap-4"
+                    : "w-[350px] ml-8 -mt-5 lg:mt-0 lg:ml-0 h-[73px] lg:w-99.75 lg:h-32.25 mb-5 border rounded-[11.35px] lg:rounded-[20px] bg-[#EDF8F5] border-[#EBEBEB] text-black flex justify-center items-center gap-4"
                 }
               >
                 <Image
@@ -155,23 +155,23 @@ const CurrentMarketRate = ({
                 />
               </div>
 
-              <div className="h-32.25 flex items-center lg:ml-0 ml-4 -mt-7 lg:mt-0 lg:flex-col lg:gap-2">
+              <div className="h-32.25 flex items-center md:items-start lg:ml-0 ml-4 -mt-7 lg:-mt-5 lg:flex-col lg:gap-2">
                 <h1 className="font-inter -mt-3 lg:mt-0 ml-5 lg:ml-0 text-[14px] lg:text-[14px] font-medium text-[#94A3B8]">
                   Equals
                 </h1>
-                <div className="w-[36px] h-[36px] lg:w-14.5 lg:h-14.5 lg:hidden -mt-3  border bg-white rounded-full  absolute ml-17 border-[#EBEBEB] flex items-center justify-center shadow-black">
+                <div className="w-[36px] h-[36px] lg:w-14.5 lg:h-14.5 lg:hidden -mt-3   border bg-white rounded-full  absolute ml-17 border-[#EBEBEB] flex items-center justify-center shadow-black">
                   <FontAwesomeIcon
                     icon={faArrowRight}
                     className="text-[#94A3B8] text-[22px]"
                   />
                 </div>
-                <div className="w-[180px] h-[65px] -mt-5 ml-8 lg:mt-0 lg:ml-0 lg:min-w-94.25 lg:h-20 border flex bg-white items-center justify-around rounded-[14px] border-[#EBEBEB]">
+                <div className="w-[180px] h-[65px] -mt-5 ml-8 lg:-mt-0 lg:ml-0 lg:min-w-94.25 lg:h-20 border flex bg-white items-center justify-around rounded-[14px] border-[#EBEBEB]">
                   <div>
                     <h1 className="font-sunflower font-bold text-[14px] lg:text-[19px] text-black">
-                      {toCurrency.symbol}
+                      {toCurrency.symbol}{" "}
                       {(amountInput * (provider?.price || 0)).toFixed(2)}
                     </h1>
-                    <h1 className="font-inter font-light text-[14px] lg:text-[20px] lg:-mt-3 text-black">
+                    <h1 className="font-inter font-light text-[14px] lg:text-[20px] lg:-mt-2 text-black">
                       {toCurrency.name}
                     </h1>
                   </div>

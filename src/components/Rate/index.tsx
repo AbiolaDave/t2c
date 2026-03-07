@@ -1,5 +1,4 @@
 "use client";
-
 import { RatesProviders } from "@/utils/rates/rates";
 import { RatesProviderType } from "@/utils/types";
 import Image from "next/image";
@@ -16,15 +15,18 @@ const Rate = () => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-[#F6FFFC] mt-10 p-4 ml-2 lg:ml-32 lg:mt-30 font-sans">
-      <div className="text-start xl:ml-32">
-        <h1 className="font-sunflower text-[#3CAE8C] font-light text-[40px]/[38.16px] lg:text-[71px]/[67px] max-w-80 lg:max-w-125">
+    <div className="relative overflow-hidden bg-[#F6FFFC] mt-10 lg:mt-50 p-4 md:p-0 font-sans">
+      {/* ✅ padding instead of relative left */}
+      <div className="text-start  px-[10%] xl:px-[15%]">
+        <h1 className="font-sunflower text-[#3CAE8C] font-light text-[40px]/[38.16px] lg:text-[71px]/[67px] max-w-80 lg:max-w-125 relative">
           Track Exchange <span className="text-[#6F6F6F]">Rate Trends</span>
         </h1>
       </div>
 
-      <div className="flex flex-col-reverse lg:flex-row md:gap-10 mt-5 xl:justify-evenly">
-        <div className="lg:w-187 lg:h-100.5 rounded-[14px] bg-white border border-[#E1E7EF80] p-4">
+      {/* ✅ padding + max-w to cap growth on very wide screens */}
+      <div className="flex flex-col-reverse lg:flex-row px-[10%] xl:pl-[15%] gap-6 xl:gap-30 mt-5 max-w-[1600px]">
+        {/* ✅ flex-1 so chart fills available space fluidly */}
+        <div className="flex-1  lg:h-100.5 rounded-[14px] bg-white border border-[#E1E7EF80] p-4">
           <div className="flex items-center">
             <Image
               className="w-11.5 h-11.5"
@@ -37,41 +39,39 @@ const Rate = () => {
               Rate History: {rateProvider.name}
             </h1>
           </div>
-
           <div className="h-85">
             <RateChart />
           </div>
         </div>
 
-        <div className=" lg:w-73.25 lg:h-100.5 border border-[#E1E7EF80] rounded-[8.6px] lg:rounded-[15px] bg-white flex flex-col overflow-y-auto custom-scroll px-5  py-5 gap-2.5">
+        {/* ✅ fixed width sidebar — won't grow or shrink */}
+        <div className="lg:w-72 lg:h-100.5 border border-[#E1E7EF80] rounded-[8.6px] lg:rounded-[15px] bg-white flex flex-col overflow-y-auto custom-scroll px-5 py-5 gap-2.5 shrink-0">
           <h1 className="lg:text-[18px] sticky left-1 text-[#0F1729] font-sunflower font-bold text-[16px]">
             All Providers
           </h1>
-          <div className="flex flex-row lg:flex-col gap-2.5  items-center">
+          <div className="flex flex-row lg:flex-col gap-2.5 items-center">
             {RatesProviders.map((provider, i) => (
-              <>
-                <div
-                  key={i}
-                  onClick={() => providerClicked(provider, i)}
-                  className={`flex w-61.5 h-13.25 rounded-[11px] bg-[#E1E7EF33] px-3 lg:px-0 lg:pl-8 items-center gap-2.5 hover:bg-white cursor-pointer ${
-                    i === activeIndex
-                      ? "border-2 shadow-sm shadow-gray-400 border-[#3CAE8C]"
-                      : ""
-                  }`}
-                >
-                  <div className="w-7.5 h-7.5 rounded-[11px] bg-white shadow-sm flex items-center justify-center">
-                    <Image
-                      src={provider.logo}
-                      alt={provider.name}
-                      width={100}
-                      height={100}
-                    />
-                  </div>
-                  <h1 className="font-inter font-medium text-[15px] text-[#0F1729]">
-                    {provider.name}
-                  </h1>
+              <div
+                key={i}
+                onClick={() => providerClicked(provider, i)}
+                className={`flex w-61.5 h-13.25 rounded-[11px] bg-[#E1E7EF33] px-3 lg:px-0 lg:pl-8 items-center gap-2.5 hover:bg-white cursor-pointer ${
+                  i === activeIndex
+                    ? "border-2 shadow-sm shadow-gray-400 border-[#3CAE8C]"
+                    : ""
+                }`}
+              >
+                <div className="w-7.5 h-7.5 rounded-[11px] bg-white shadow-sm flex items-center justify-center">
+                  <Image
+                    src={provider.logo}
+                    alt={provider.name}
+                    width={100}
+                    height={100}
+                  />
                 </div>
-              </>
+                <h1 className="font-inter font-medium text-[15px] text-[#0F1729]">
+                  {provider.name}
+                </h1>
+              </div>
             ))}
           </div>
         </div>

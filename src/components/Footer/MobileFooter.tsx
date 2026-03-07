@@ -8,7 +8,7 @@ const MobileFooter = () => {
   return (
     <>
       {/* ===================== UPPER FOOTER (ORIGINAL – FULLY RESTORED) ===================== */}
-      <div className="relative overflow-hidden w-full h-140 lg:h-235.5 bg-black p-4 -mt-40 font-sans">
+      <div className="relative overflow-hidden w-full h-140  lg:h-235.5 bg-black p-4 -mt-40 font-sans">
         <div>
           <Image
             src="/euro.png"
@@ -60,7 +60,7 @@ const MobileFooter = () => {
             alt="Yen Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute right-6 lg:right-10"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute right-4 lg:right-10"
           />
           <Image
             src="/pound.png"
@@ -71,11 +71,11 @@ const MobileFooter = () => {
           />
         </div>
 
-        <div className="w-166.25 h-82.25 mx-auto mt-30 lg:mt-70 z-30">
-          <h1 className="font-sunflower font-medium ml-14 lg:ml-0 text-[40px]/[43.75px] lg:text-[76px]/[77px] text-center text-white max-w-70 lg:max-w-169.25">
+        <div className="w-full h-82.25 mx-auto mt-30 lg:mt-70 z-30">
+          <h1 className="font-sunflower font-medium mx-auto lg:ml-0 text-[40px]/[43.75px] lg:text-[56px]/[67px] text-center text-white max-w-70 lg:max-w-169.25 relative z-50">
             Every Currency Rate In One Place
           </h1>
-          <p className="font-inter text-[12px]/[15.05px] lg:text-[19px]/[27px] text-center text-[#8F8F8F] max-w-60 ml-18 lg:ml-0 lg:max-w-127 relative z-50 mx-auto">
+          <p className="font-inter text-[12px]/[15.05px] lg:text-[19px]/[27px] text-center text-[#8F8F8F] max-w-60 mx-auto lg:ml-0 lg:max-w-127 relative z-50 mx-auto">
             Information overload is a thing of the past. We aggregate the latest
             market data and project updates so you can focus on making informed
             decisions without the clutter.
@@ -108,7 +108,7 @@ const MobileFooter = () => {
       </div>
 
       {/* ===================== LOWER FOOTER (IMPROVED) ===================== */}
-      <div className="w-full bg-black">
+      <div className="w-full bg-black md:h-auto">
         <div className="flex justify-between mb-5 px-3 lg:px-0 max-w-7xl ">
           {/* LEFT */}
           <div className="flex flex-col gap-10">
@@ -223,7 +223,7 @@ const MobileFooter = () => {
             </h1>
           </div>
         </div>
-        <div className="flex flex-col lg:hidden md:hidden justify-evenly items-center mt-5 mb-10">
+        <div className="flex flex-col lg:hidden justify-evenly items-center mt-5 mb-10">
           <div className="flex gap-5">
             <div
               className="border rounded-full flex justify-center items-center 
