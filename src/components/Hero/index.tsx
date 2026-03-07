@@ -100,12 +100,12 @@ const Hero = () => {
               </div>
             )}
           </div>
-          <div className="w-full mt-30  flex items-center gap-5 lg:gap-10 ">
+          <div className="w-full mt-30  flex items-center gap-5 md:justify-evenly">
             <div className="block md:hidden border rounded-[100%] -mt-50 bg-[#3CAE8C] w-61.25 h-61.25 blur-3xl -mx-33 z-0"></div>
             <div>
-              <div className="rounded-[100%] -mx-50  md:block md:-mx-30 border lg:bg-[#3CAE8C] w-61.25 h-61.25 blur-3xl"></div>
+              <div className="rounded-[100%] -mx-50  md:block md:-mx-30 border lg:bg-[#3CAE8C] w-61.25 h-61.25 blur-3xl xl:-mx-50"></div>
             </div>
-            <div className="-mt-50 lg:mt-0 ml-3 lg:ml-25 relative z-30">
+            <div className="-mt-50 lg:mt-0 ml-3 lg:ml-50  xl:ml-20 relative z-30">
               <h1 className="font-light text-[40px]/[40px] md:text-[75px]/[75px] lg:text-[75px]/[75px] font-sunflower  text-[#F8FAFC] max-w-75 lg:max-w-4xl">
                 Compare Exchange Rates{" "}
                 <span className="text-[#D9D9D9]">Across Platforms</span>

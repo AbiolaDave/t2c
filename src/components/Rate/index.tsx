@@ -17,13 +17,13 @@ const Rate = () => {
 
   return (
     <div className="relative overflow-hidden bg-[#F6FFFC] mt-10 p-4 ml-2 lg:ml-32 lg:mt-30 font-sans">
-      <div className="text-start">
+      <div className="text-start xl:ml-32">
         <h1 className="font-sunflower text-[#3CAE8C] font-light text-[40px]/[38.16px] lg:text-[71px]/[67px] max-w-80 lg:max-w-125">
           Track Exchange <span className="text-[#6F6F6F]">Rate Trends</span>
         </h1>
       </div>
 
-      <div className="flex flex-col-reverse lg:flex-row gap-10 mt-5">
+      <div className="flex flex-col-reverse lg:flex-row md:gap-10 mt-5 xl:justify-evenly">
         <div className="lg:w-187 lg:h-100.5 rounded-[14px] bg-white border border-[#E1E7EF80] p-4">
           <div className="flex items-center">
             <Image
@@ -51,7 +51,7 @@ const Rate = () => {
             {RatesProviders.map((provider, i) => (
               <>
                 <div
-                  key={provider.id}
+                  key={i}
                   onClick={() => providerClicked(provider, i)}
                   className={`flex w-61.5 h-13.25 rounded-[11px] bg-[#E1E7EF33] px-3 lg:px-0 lg:pl-8 items-center gap-2.5 hover:bg-white cursor-pointer ${
                     i === activeIndex

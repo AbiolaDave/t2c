@@ -44,7 +44,7 @@ const UpperFooter = () => {
             alt="Euro Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute ml-90 lg:ml-250 z-10"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute ml-90 lg:ml-250 z-10 xl:ml-350"
           />
 
           <Image
@@ -52,21 +52,21 @@ const UpperFooter = () => {
             alt="Dollar Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute ml-85 lg:ml-300 z-10"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute ml-85 lg:ml-300 z-10 xl:ml-370"
           />
           <Image
             src="/yen.png"
             alt="Yen Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute ml-90 lg:ml-280 z-10"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute ml-90 lg:ml-280 z-10 xl:ml-350"
           />
           <Image
             src="/pound.png"
             alt="Pound Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute ml-80 lg:ml-240 z-10"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute ml-80 lg:ml-240 z-10 xl:ml-300"
           />
         </div>
         <div className="w-166.25 h-82.25 mx-auto mt-40 lg:mt-70 z-30">
@@ -95,7 +95,7 @@ const UpperFooter = () => {
         </div>
 
         {/* Vector 2 - bottom center */}
-        <div className="absolute -bottom-10 left-80 lg:left-140 w-[108.35px] h-[181.02px] lg:w-[518px] lg:h-[551px] z-0">
+        <div className="absolute -bottom-10 left-80 lg:left-140 xl:left-180 w-[108.35px] h-[181.02px] lg:w-[518px] lg:h-[551px] z-0">
           <Image
             src="/vector.png"
             alt="vector"
@@ -105,7 +105,7 @@ const UpperFooter = () => {
         </div>
 
         {/* Vector 3 - bottom right */}
-        <div className="absolute bottom-20 -right-60 w-[108.35px] h-[181.02px] lg:w-[518px] lg:h-[551px] z-0">
+        <div className="absolute bottom-20 -right-60 w-[108.35px] h-[181.02px] lg:w-[518px] lg:h-[551px] xl:-right-80 z-0">
           <Image
             src="/vector.png"
             alt="vector"
