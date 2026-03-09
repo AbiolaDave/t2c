@@ -15,7 +15,10 @@ const Rate = () => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-[#F6FFFC] mt-10 lg:mt-50 p-4 md:p-0 font-sans">
+    <div
+      id="rate"
+      className="relative overflow-hidden bg-[#F6FFFC] mt-10 lg:mt-50 p-2 md:p-0 font-sans"
+    >
       {/* ✅ padding instead of relative left */}
       <div className="text-start  px-[10%] xl:px-[15%]">
         <h1 className="font-sunflower text-[#3CAE8C] font-light text-[40px]/[38.16px] lg:text-[71px]/[67px] max-w-80 lg:max-w-125 relative">

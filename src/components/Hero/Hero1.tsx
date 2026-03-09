@@ -44,13 +44,31 @@ const Hero1 = () => {
       amount: yup.number(),
     }),
   });
+  const navDirect = (params: string) => {
+    if (params == "compare") {
+      document.getElementById("compare")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+    if (params == "providers") {
+      document.getElementById("main")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+    if (params == "trends") {
+      document.getElementById("rate")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
       <div
         id="hero"
-        className="flex items-center justify-center overflow-hidden p-4 bg-[#F6FFFC] font-sans "
+        className="flex items-center justify-center overflow-hidden p-2 md:p-4 bg-[#F6FFFC] font-sans "
       >
-        <main className="h-205 md:h-205 h-175 mt-10  lg:mt-0 lg:h-205.75 w-full rounded-[20.96px] lg:rounded-[39px] bg-[#121421] overflow-hidden md:px-5 lg:px-20">
+        <main className="h-205 md:h-205 h-175 mt-0  lg:mt-0 lg:h-205.75 w-full rounded-[20.96px] lg:rounded-[39px] bg-[#121421] overflow-hidden md:px-5 lg:px-20">
           <div className="relative">
             <div className="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-20 mt-10 font-sunflower">
               <div className="flex text-white gap-2">
@@ -63,11 +81,24 @@ const Hero1 = () => {
                 <p className="text-white text-[18px] font-light">Tap2Compare</p>
               </div>
               <div className="hidden md:flex lg:flex justify-evenly items-center lg:gap-10 md:gap-5">
-                <h1 className="text-white text-[18px] font-light">
+                <h1
+                  onClick={() => navDirect("compare")}
+                  className="text-white text-[18px] font-light"
+                >
                   Compare Exchange Rates
                 </h1>
-                <h1 className="text-white text-[18px] font-light">Providers</h1>
-                <h1 className="text-white text-[18px] font-light">Trends</h1>
+                <h1
+                  onClick={() => navDirect("providers")}
+                  className="text-white text-[18px] font-light"
+                >
+                  Providers
+                </h1>
+                <h1
+                  onClick={() => navDirect("trends")}
+                  className="text-white text-[18px] font-light"
+                >
+                  Trends
+                </h1>
               </div>
               <div className="">
                 <button
@@ -79,6 +110,28 @@ const Hero1 = () => {
                   </h1>
                 </button>
               </div>
+              {isMenuOpen && (
+                <div className="absolute left-0 top-15 w-full flex flex-col md:hidden bg-[#121421] h-[200px] justify-center items-center px-6 py-4 gap-4 z-50">
+                  <h1
+                    onClick={() => navDirect("compare")}
+                    className="text-white text-[18px] font-light cursor-pointer hover:text-[#3CAE8C] transition-colors"
+                  >
+                    Compare Exchange Rates
+                  </h1>
+                  <h1
+                    onClick={() => navDirect("providers")}
+                    className="text-white text-[18px] font-light cursor-pointer hover:text-[#3CAE8C] transition-colors"
+                  >
+                    Providers
+                  </h1>
+                  <h1
+                    onClick={() => navDirect("trends")}
+                    className="text-white text-[18px] font-light cursor-pointer hover:text-[#3CAE8C] transition-colors"
+                  >
+                    Trends
+                  </h1>
+                </div>
+              )}
             </div>
             {/* Text + Glass Morphism */}
             <div className="w-full relative">
@@ -107,7 +160,10 @@ const Hero1 = () => {
           <div className="relative isolate">
             <div className="absolute -ml-30 lg:ml-3.25 mt-8 rounded-[100%] bg-[#3CAE8C]  w-61.25 h-61.25 blur-3xl z-0"></div>
             <div className="max-w-[1280px] mx-auto px-6 lg:px-10 z-30 relative mt-10 lg:mt-30">
-              <div className=" max-w-89.75 h-76.5 md:max-w-full lg:w-251.25 lg:max-w-full lg:h-60.5 border-2 lg:border-4 rounded-[16.68px] lg:rounded-4xl   border-[#3CAE8C] flex flex-col pt-5 lg:pt-0 ">
+              <div
+                id="compare"
+                className=" max-w-89.75 h-76.5 md:max-w-full lg:w-251.25 lg:max-w-full lg:h-60.5 border-2 lg:border-4 rounded-[16.68px] lg:rounded-4xl   border-[#3CAE8C] flex flex-col pt-5 lg:pt-0 "
+              >
                 <div className="flex flex-col lg:flex-row justify-start lg:justify-around items-center md:items-start lg:items-center h-full">
                   <div className="flex flex-col -ml-12 md:ml-10 lg:ml-0 lg:flex-row lg:gap-18">
                     <div>

@@ -62,9 +62,9 @@ const CurrentMarketRate = ({
   return (
     <div
       id="main"
-      className="flex flex-col min-h-screen items-center justify-center overflow-hidden! p-4 bg-[#F6FFFC] font-sans -ml-8 lg:ml-0 -mt-30 lg:-mt-5 pt-40 "
+      className="flex flex-col lg:min-h-screen items-center justify-center overflow-hidden! p-4 bg-[#F6FFFC] font-sans -ml-8 md:ml-0  lg:ml-0 -mt-30 lg:-mt-5 pt-40"
     >
-      <div className="flex flex-col lg:flex-row lg:gap-10 justify-between items-center w-272.5">
+      <div className="flex flex-col md:flex-row md:gap-3 lg:gap-10 justify-between items-center w-272.5 md:w-160 lg:w-272.5">
         <div className="md:ml-0 -ml-20">
           <h1 className="text-[27.24px]/[24.97px] lg:text-[48px]/[44px] font-light font-sunflower max-w-[170px] lg:max-w-69.75 text-[#0F1729]">
             Current Market Rates
@@ -109,7 +109,7 @@ const CurrentMarketRate = ({
                 className={
                   i === 0
                     ? "w-[350px] ml-8 lg:ml-0 h-[73px] lg:w-99.75 lg:h-32.25 mb-5 border rounded-[11.35px] lg:rounded-[20px] bg-[#3CAE8C] border-[#3CAE8C] flex justify-center text-white items-center gap-4"
-                    : "w-[350px] ml-8 -mt-5 lg:mt-0 lg:ml-0 h-[73px] lg:w-99.75 lg:h-32.25 mb-5 border rounded-[11.35px] lg:rounded-[20px] bg-[#EDF8F5] border-[#EBEBEB] text-black flex justify-center items-center gap-4"
+                    : "w-[350px] ml-8 -mt-5 md:-mt-10 lg:mt-0 lg:ml-0 h-[73px] lg:w-99.75 lg:h-32.25 mb-5 border rounded-[11.35px] lg:rounded-[20px] bg-[#EDF8F5] border-[#EBEBEB] text-black flex justify-center items-center gap-4"
                 }
               >
                 <Image
@@ -155,17 +155,17 @@ const CurrentMarketRate = ({
                 />
               </div>
 
-              <div className="h-32.25 flex items-center md:items-start lg:ml-0 ml-4 -mt-7 lg:-mt-5 lg:flex-col lg:gap-2">
-                <h1 className="font-inter -mt-3 lg:mt-0 ml-5 lg:ml-0 text-[14px] lg:text-[14px] font-medium text-[#94A3B8]">
+              <div className="h-32.25 flex items-center md:items-start lg:ml-0 ml-4 -mt-7 md:-mt-1 lg:-mt-5 lg:flex-col lg:gap-2">
+                <h1 className="font-inter -mt-3 md:mt-6 lg:mt-0 ml-5 lg:ml-0 text-[14px] lg:text-[14px] font-medium  text-[#94A3B8]">
                   Equals
                 </h1>
-                <div className="w-[36px] h-[36px] lg:w-14.5 lg:h-14.5 lg:hidden -mt-3   border bg-white rounded-full  absolute ml-17 border-[#EBEBEB] flex items-center justify-center shadow-black">
+                <div className="w-[36px] h-[36px] lg:w-14.5 lg:h-14.5 lg:hidden -mt-3 md:mt-4 lg:mt-0   border bg-white rounded-full  absolute ml-17 border-[#EBEBEB] flex items-center justify-center shadow-black">
                   <FontAwesomeIcon
                     icon={faArrowRight}
                     className="text-[#94A3B8] text-[22px]"
                   />
                 </div>
-                <div className="w-[180px] h-[65px] -mt-5 ml-8 lg:-mt-0 lg:ml-0 lg:min-w-94.25 lg:h-20 border flex bg-white items-center justify-around rounded-[14px] border-[#EBEBEB]">
+                <div className="w-[180px] h-[65px] -mt-5 md:mt-0 ml-8 lg:-mt-0 lg:ml-0 lg:min-w-94.25 lg:h-20 border flex bg-white items-center justify-around rounded-[14px] border-[#EBEBEB]">
                   <div>
                     <h1 className="font-sunflower font-bold text-[14px] lg:text-[19px] text-black">
                       {toCurrency.symbol}{" "}
@@ -191,7 +191,7 @@ const CurrentMarketRate = ({
                 <div className="lg:hidden flex justify-end">
                   <button
                     type="button"
-                    className="bg-[#3CAE8C] text-white py-3 px-2 justify-center z-50 cursor-pointer w-[90px] h-[30px] ml-2 -mt-5 rounded-[6.78px] flex items-center"
+                    className="bg-[#3CAE8C] text-white py-3 px-2 justify-center z-50 cursor-pointer w-[90px] h-[30px] ml-2 -mt-5 md:mt-4 lg:mt-0 rounded-[6.78px] flex items-center"
                   >
                     <h1 className="text-white text-[8px] font-bold">
                       Go to Provider
@@ -214,15 +214,15 @@ const CurrentMarketRate = ({
         />
       </div>
 
-      <div className="min-h-screen w-screen lg:w-fit overflow-hidden mt-10 lg:mt-20 p-4  ml-8 md:ml-12 font-sans">
-        <div className="text-start">
+      <div className="min-h-screen w-screen lg:w-full overflow-hidden mt-10 lg:mt-20 p-4  ml-8 md:ml-12 font-sans lg:ml-50">
+        <div className="">
           <h1 className="font-sunflower text-[#0F1729] font-light text-[40px]/[38.16px]  lg:text-[71px]/[67px] max-w-125">
             Trends
           </h1>
         </div>
 
-        <div className="flex flex-col-reverse lg:flex-row gap-10 mt-10">
-          <div className="lg:w-187 lg:h-100.5 rounded-[14px] bg-white border border-[#E1E7EF80] p-4 relative z-30">
+        <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-3 lg:gap-10 mt-10">
+          <div className="md:w-120 lg:w-187 md:h-100.5 rounded-[14px] bg-white border border-[#E1E7EF80] p-4 relative z-30">
             <div className="flex items-center">
               <Image
                 className="w-11.5 h-11.5"
@@ -237,17 +237,17 @@ const CurrentMarketRate = ({
             </div>
             {/* Only render chart when container is ready */}
             {chartReady && (
-              <div className="w-full mt-10 h-85">
+              <div className="w-full mt-10 md:mt-0 h-85">
                 <RateChart />
               </div>
             )}
           </div>
 
-          <div className=" lg:w-73.25 lg:h-100.5 border border-[#E1E7EF80] rounded-[8.6px] lg:rounded-[15px] bg-white flex flex-col overflow-y-auto px-5  py-5 gap-2.5">
+          <div className="md:w-60 lg:w-73.25 md:h-100.5 border border-[#E1E7EF80] rounded-[8.6px] lg:rounded-[15px] bg-white flex flex-col overflow-y-auto px-5  py-5 gap-2.5">
             <h1 className="lg:text-[18px] sticky left-5 text-[#0F1729] font-sunflower font-bold text-[20px]">
               All Providers
             </h1>
-            <div className="flex flex-row lg:flex-col gap-2.5  items-center">
+            <div className="flex flex-row md:flex-col gap-2.5  items-center">
               {RatesProviders.map((provider, i) => (
                 <div
                   onClick={() => providerClicked(provider, i)}
@@ -281,13 +281,13 @@ const CurrentMarketRate = ({
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden! w-full">
+        <div className="overflow-hidden! w-full">
           <Image
             src="/coinhalf.png"
             alt="coinhalf"
-            width={100}
-            height={100}
-            className="absolute w-32.25 h-25.75 right-0 lg:h-75 -mt-5 lg:w-55 lg:ml-250 lg:-mt-10 object-fill z-30"
+            width={400}
+            height={400}
+            className="absolute w-32.25 h-25.75  -right-10 lg:h-75 -mt-5 lg:w-55  lg:-mt-10 object-fill z-30"
           />
         </div>
         <div className="block md:hidden">
