@@ -68,7 +68,7 @@ const Hero1 = () => {
         id="hero"
         className="flex items-center justify-center overflow-hidden p-2 md:p-4 bg-[#F6FFFC] font-sans "
       >
-        <main className="h-205 md:h-205 h-175 mt-0  lg:mt-0 lg:h-205.75 w-full rounded-[20.96px] lg:rounded-[39px] bg-[#121421] overflow-hidden md:px-5 lg:px-20">
+        <main className="h-205 md:h-205 h-175 mt-0  lg:mt-0 lg:h-205.75 w-full rounded-b-[20.96px] lg:rounded-[39px] bg-[#121421] overflow-hidden md:px-5 lg:px-20">
           <div className="relative">
             <div className="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-20 mt-10 font-sunflower">
               <div className="flex text-white gap-2">
