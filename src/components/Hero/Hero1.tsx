@@ -68,7 +68,7 @@ const Hero1 = () => {
         id="hero"
         className="flex items-center justify-center overflow-hidden p-2 md:p-4 bg-[#F6FFFC] font-sans "
       >
-        <main className="h-205 md:h-205 h-175 mt-0  lg:mt-0 lg:h-205.75 w-full rounded-b-[20.96px] lg:rounded-[39px] bg-[#121421] overflow-hidden md:px-5 lg:px-20">
+        <main className=" md:h-205 h-175 mt-0  lg:mt-0 lg:h-205.75 w-full rounded-b-[20.96px] lg:rounded-[39px] bg-[#121421] overflow-hidden md:px-5 lg:px-20">
           <div className="relative">
             <div className="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-20 mt-10 font-sunflower">
               <div className="flex text-white gap-2">
@@ -114,13 +114,13 @@ const Hero1 = () => {
                 <div className="absolute left-0 top-15 w-full flex flex-col md:hidden bg-[#121421] h-[200px] justify-center items-center px-6 py-4 gap-4 z-50">
                   <div
                     onClick={() => setIsMenuOpen(false)}
-                    className="absolute left-10 top-5 mb-5"
+                    className="absolute left-10 top-5 mb-10 hover:bor"
                   >
-                    <X />
+                    <X size={30} />
                   </div>
                   <h1
                     onClick={() => navDirect("compare")}
-                    className="text-white text-[18px] font-light cursor-pointer hover:text-[#3CAE8C] transition-colors"
+                    className="text-white mt-5 text-[18px] font-light cursor-pointer hover:text-[#3CAE8C] transition-colors"
                   >
                     Compare Exchange Rates
                   </h1>
@@ -145,7 +145,7 @@ const Hero1 = () => {
                 <div className="rounded-[100%] border bg-[#3CAE8C] w-61.25 h-61.25 blur-3xl"></div>
               </div>
               {/* Text */}
-              <div className="relative z-30 mt-32">
+              <div className="relative z-30 mt-10 md:mt-32">
                 <div className="lg:max-w-[1280px] mx-auto px-6 lg:px-10">
                   <h1 className="font-light text-[40px]/[40px] md:text-[65px]/[75px] lg:text-[75px]/[75px] font-sunflower  text-[#F8FAFC] max-w-75 md:max-w-[700px] lg:max-w-4xl">
                     Compare Exchange Rates{" "}
