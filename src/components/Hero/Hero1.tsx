@@ -111,7 +111,7 @@ const Hero1 = () => {
                 </button>
               </div>
               {isMenuOpen && (
-                <div className="absolute left-0 top-15 w-full flex flex-col md:hidden bg-[#121421] h-[200px] justify-center items-center px-6 py-4 gap-4 z-50">
+                <div className="absolute left-0 top-15 w-full flex flex-col md:hidden bg-[#121421] h-[200px] text-white justify-center items-center px-6 py-4 gap-4 z-50">
                   <div
                     onClick={() => setIsMenuOpen(false)}
                     className="absolute left-10 top-5 mb-10 hover:bor"
