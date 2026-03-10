@@ -1,10 +1,27 @@
+"use client"
+
 import { faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
+import TrackRateModal from "../SubscribeModal";
 
 const UpperFooter = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+    // const getUpdate = () => setIsOpen(true);
+    const closeModal = () => setIsOpen(false);
+  
+    const getUpdateBtn = () => {
+      document.getElementById("hero")?.scrollIntoView({
+        behavior: "smooth",
+      });
+      setIsOpen(true);
+    };
+  
   return (
     <>
       <div className="relative overflow-hidden h-140 lg:h-235.5 bg-black p-4 font-sans">
@@ -144,11 +161,14 @@ const UpperFooter = () => {
           {/*end*/}
           <div className="h-56.75 px-3 flex flex-col items-end gap-4">
             <p className="font-sunflower font-bold text-[13px] lg:text-[30px] text-white">
-              Get Update
+              Get Updates
             </p>
-            <div className="w-[156.45px] h-[31.54px] lg:w-62 lg:h-12.5 mt-7 flex justify-between items-center rounded-md bg-white  cursor-pointer">
+            <div
+              onClick={getUpdateBtn}
+              className="w-[156.45px] h-[31.54px] lg:w-62 lg:h-12.5 mt-7 flex justify-between items-center rounded-md bg-white  cursor-pointer"
+            >
               <p className="font-sunflower font-medium text-[13px] ml-5 lg:text-[14px] text-[#0A142F]">
-                Get Update
+                Get Updates
               </p>
               <div className="w-8  lg:w-11.75 lg:h-11.75 bg-[#3CAE8C] rounded-r-md float-end flex text-white items-center justify-center">
                 <ArrowRight size={30} />
@@ -309,6 +329,8 @@ const UpperFooter = () => {
           </div>
         </div>
       </div>
+
+       <TrackRateModal isOpen={isOpen} onClose={closeModal} />
     </>
   );
 };

@@ -1,10 +1,27 @@
+"use client";
+
 import { faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
+import TrackRateModal from "../SubscribeModal";
 
 const MobileFooter = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // const getUpdate = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
+  const getUpdateBtn = () => {
+    document.getElementById("hero")?.scrollIntoView({
+      behavior: "smooth",
+    });
+    setIsOpen(true);
+  };
+
   return (
     <>
       {/* ===================== UPPER FOOTER (ORIGINAL – FULLY RESTORED) ===================== */}
@@ -140,10 +157,13 @@ const MobileFooter = () => {
           {/* RIGHT */}
           <div className="flex flex-col items-end gap-6">
             <p className="font-sunflower text-white text-[13px] lg:text-[30px] font-bold">
-              Get Update
+              Get Updates
             </p>
 
-            <div className="flex bg-white rounded-md overflow-hidden">
+            <div
+              onClick={getUpdateBtn}
+              className="flex bg-white rounded-md overflow-hidden"
+            >
               <p className="px-2 py-2 text-[#0A142F] text-[13px]">
                 Get Rate updates
               </p>
@@ -290,6 +310,8 @@ const MobileFooter = () => {
           </div>
         </div>
       </div>
+
+      <TrackRateModal isOpen={isOpen} onClose={closeModal} />
     </>
   );
 };

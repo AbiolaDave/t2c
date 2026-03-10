@@ -79,7 +79,7 @@ const Hero = () => {
                   onClick={getUpdate}
                 >
                   <h1 className="text-white text-[18px] font-light">
-                    Get Update
+                    Get Updates
                   </h1>
                 </button>
               </div>

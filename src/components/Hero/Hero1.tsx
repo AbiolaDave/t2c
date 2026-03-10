@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import ChangeRateView from "@/utils/ChangeRateView/ChangeRateView";
 import { Currencies } from "@/utils/rates/rates";
 import { CurrencyOption } from "@/utils/types";
-import { ArrowLeftRight, ArrowUpDown, Menu } from "lucide-react";
+import { ArrowLeftRight, ArrowUpDown, Menu, X } from "lucide-react";
 import { useState } from "react";
 import * as yup from "yup";
 import { CurrencySelect } from "../Currencies/Currencies";
@@ -106,12 +106,18 @@ const Hero1 = () => {
                   onClick={getUpdate}
                 >
                   <h1 className="text-white text-[18px] font-light">
-                    Get Update
+                    Get Updates
                   </h1>
                 </button>
               </div>
               {isMenuOpen && (
                 <div className="absolute left-0 top-15 w-full flex flex-col md:hidden bg-[#121421] h-[200px] justify-center items-center px-6 py-4 gap-4 z-50">
+                  <div
+                    onClick={() => setIsMenuOpen(false)}
+                    className="absolute left-10 top-5 mb-5"
+                  >
+                    <X />
+                  </div>
                   <h1
                     onClick={() => navDirect("compare")}
                     className="text-white text-[18px] font-light cursor-pointer hover:text-[#3CAE8C] transition-colors"
