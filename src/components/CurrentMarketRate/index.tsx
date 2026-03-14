@@ -221,7 +221,7 @@ const CurrentMarketRate = ({
           </h1>
         </div>
 
-        <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-3 lg:gap-10 mt-10">
+        <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-3 lg:gap-10 mt-10 2xl:max-w-full 2xl:gap-50">
           <div className="md:w-120 lg:w-187 md:h-100.5 rounded-[14px] bg-white border border-[#E1E7EF80] p-4 relative z-30">
             <div className="flex items-center">
               <Image

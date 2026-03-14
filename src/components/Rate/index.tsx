@@ -17,7 +17,7 @@ const Rate = () => {
   return (
     <div
       id="rate"
-      className="relative overflow-hidden bg-[#F6FFFC] mt-10 lg:mt-50 p-2 md:p-0 font-sans"
+      className="relative overflow-hidden mt-10 lg:mt-50 p-2 md:p-0 font-sans"
     >
       {/* ✅ padding instead of relative left */}
       <div className="text-start  px-[10%] xl:px-[15%]">
@@ -27,7 +27,7 @@ const Rate = () => {
       </div>
 
       {/* ✅ padding + max-w to cap growth on very wide screens */}
-      <div className="flex flex-col-reverse lg:flex-row px-[10%] xl:pl-[15%] gap-6 xl:gap-30 mt-5 max-w-[1600px]">
+      <div className="flex flex-col-reverse lg:flex-row px-[10%] xl:pl-[15%] gap-6 xl:gap-30 mt-5 max-w-[1600px]  2xl:max-w-full 2xl:gap-50">
         {/* ✅ flex-1 so chart fills available space fluidly */}
         <div className="flex-1  lg:h-100.5 rounded-[14px] bg-white border border-[#E1E7EF80] p-4">
           <div className="flex items-center">
