@@ -64,11 +64,16 @@ const Hero1 = () => {
 
   return (
     <>
+      {/* overflow */}
       <div
         id="hero"
-        className="flex items-center justify-center overflow-hidden p-2 md:p-4 bg-[#F6FFFC] font-sans  max-w-[1600px] mx-auto"
+        style={{ overflowX: "clip" }}
+        className="relative flex items-center justify-center p-2 md:p-4 bg-[#F6FFFC] font-sans max-w-[1600px] mx-auto z-20"
       >
-        <main className=" md:h-205 h-175 mt-0  lg:mt-0 lg:h-205.75 w- rounded-b-[20.96px] lg:rounded-[39px] bg-[#121421] overflow-hidden md:px-5 lg:px-20 max-w-[1600px]!">
+        <main
+          style={{ overflowX: "clip" }}
+          className="md:h-205 h-175 mt-0 lg:mt-0 lg:h-205.75 rounded-b-[20.96px] lg:rounded-[39px] bg-[#121421] md:px-5 lg:px-20 max-w-[1600px]!"
+        >
           <div className="relative">
             <div className="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-20 md:mt-10 font-sunflower">
               <div className="flex text-white gap-2">

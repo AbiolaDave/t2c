@@ -6,7 +6,7 @@ const Trust = () => {
   return (
     <>
       <div className="w-full  bg-[#F6FFFC] relative lg:pt-0 overflow-x-hidden pb-20  mx-auto">
-        <div className="flex justify-center gap-5 items-center lg:gap-40 ">
+        <div className="flex justify-center gap-5 items-center  lg:gap-40 ">
           <div className="flex flex-col justify-center items-center gap-5">
             <div className="w-[35.02px] h-[35.02px] lg:w-15.25 lg:h-15.25 text-[#3CAE8C] rounded-[5.86px] lg:rounded-[14px] border border-[#3CAE8C] flex items-center justify-center">
               <FontAwesomeIcon

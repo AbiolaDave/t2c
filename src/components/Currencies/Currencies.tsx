@@ -112,7 +112,7 @@ export function CurrencySelect({ value, options, onChange }: Props) {
 
       {/* Dropdown */}
       {open && (
-        <div className="absolute mt-2 w-[297.13px] bg-white rounded-xl shadow-lg z-50 overflow-hidden text-black">
+        <div className="absolute mt-2 w-[297.13px] bg-white rounded-xl shadow-lg z-50 text-black">
           {/* Sticky Search */}
           <div className="sticky top-0 bg-white z-10 p-3 border-b">
             <input

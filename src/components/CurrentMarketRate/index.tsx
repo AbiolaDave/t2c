@@ -62,7 +62,7 @@ const CurrentMarketRate = ({
   return (
     <div
       id="main"
-      className="relative flex flex-col  items-center justify-center overflow-x-hidden! p-4 bg-[#F6FFFC] font-sans -ml-8 md:ml-0  lg:ml-0 -mt-30 lg:-mt-5 z-50 pt-40 max-w-[1600px]"
+      className=" flex flex-col  items-center justify-center overflow-x-hidden p-4 bg-[#F6FFFC] font-sans -ml-8 md:ml-0  lg:ml-0 -mt-30 lg:-mt-5 z-50 pb-30 pt-40 max-w-[1600px]"
     >
       <div className="flex flex-col md:flex-row md:gap-3 lg:gap-10 justify-between items-center w-272.5 md:w-160 lg:w-272.5 ">
         <div className="md:ml-0 -ml-20">
