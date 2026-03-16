@@ -24,8 +24,8 @@ const MobileFooter = () => {
 
   return (
     <>
-      {/* ===================== UPPER FOOTER (ORIGINAL – FULLY RESTORED) ===================== */}
-      <div className="relative overflow-hidden w-full h-140  lg:h-235.5 bg-black p-4 -mt-40 font-sans">
+     
+      <div className="relative overflow-hidden w-full h-140  lg:h-235.5 bg-black p-4 mt-0 font-sans">
         <div>
           <Image
             src="/euro.png"
@@ -246,8 +246,7 @@ const MobileFooter = () => {
         <div className="flex flex-col lg:hidden justify-evenly items-center mt-5 mb-10">
           <div className="flex gap-5">
             <div
-              className="border rounded-full flex justify-center items-center 
-                        h-7 w-7 sm:h-8.25 sm:w-8.25 border-white"
+              className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 border-white"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -260,8 +259,7 @@ const MobileFooter = () => {
             </div>
 
             <div
-              className="border rounded-full flex justify-center items-center 
-                        h-7 w-7 sm:h-8.25 sm:w-8.25 bg-black border-white overflow-hidden"
+              className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 bg-black border-white overflow-hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -277,8 +275,7 @@ const MobileFooter = () => {
             </div>
 
             <div
-              className="border rounded-full flex justify-center items-center 
-                        h-7 w-7 sm:h-8.25 sm:w-8.25 border-white"
+              className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 border-white"
             >
               <FontAwesomeIcon
                 icon={faXTwitter}
@@ -287,8 +284,7 @@ const MobileFooter = () => {
             </div>
 
             <div
-              className="border rounded-full flex justify-center items-center 
-                        h-7 w-7 sm:h-8.25 sm:w-8.25 border-white"
+              className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 border-white"
             >
               <FontAwesomeIcon
                 icon={faInstagram}

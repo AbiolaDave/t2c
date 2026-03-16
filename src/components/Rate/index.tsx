@@ -17,7 +17,7 @@ const Rate = () => {
   return (
     <div
       id="rate"
-      className="relative overflow-hidden mt-10 lg:mt-50 p-2 md:p-0 font-sans"
+      className="relative overflow-hidden mt-10 lg:mt-50 p-2 md:p-0 font-sans max-w=[1600px]"
     >
       {/* ✅ padding instead of relative left */}
       <div className="text-start  px-[10%] xl:px-[15%]">
@@ -30,14 +30,16 @@ const Rate = () => {
       <div className="flex flex-col-reverse lg:flex-row px-[10%] xl:pl-[15%] gap-6 xl:gap-30 mt-5 max-w-[1600px]  2xl:max-w-full 2xl:gap-50">
         {/* ✅ flex-1 so chart fills available space fluidly */}
         <div className="flex-1  lg:h-100.5 rounded-[14px] bg-white border border-[#E1E7EF80] p-4">
-          <div className="flex items-center">
-            <Image
-              className="w-11.5 h-11.5"
-              src={rateProvider.logo}
-              alt={rateProvider.name}
-              width={100}
-              height={100}
-            />
+          <div className="flex items-center gap-2">
+            <div className="w-11.5 h-11.5 rounded-[50%] overflow-hidden">
+              <Image
+                className=" "
+                src={rateProvider.logo}
+                alt={rateProvider.name}
+                width={100}
+                height={100}
+              />
+            </div>
             <h1 className="text-[#0F1729] font-sunflower font-bold text-[20px]/[31px]">
               Rate History: {rateProvider.name}
             </h1>
@@ -63,7 +65,7 @@ const Rate = () => {
                     : ""
                 }`}
               >
-                <div className="w-7.5 h-7.5 rounded-[11px] bg-white shadow-sm flex items-center justify-center">
+                <div className="w-7.5 h-7.5 rounded-[11px] overflow-hidden bg-white shadow-sm flex items-center justify-center">
                   <Image
                     src={provider.logo}
                     alt={provider.name}
@@ -84,8 +86,8 @@ const Rate = () => {
         <Image
           src="/coinhalf.png"
           alt="coinhalf"
-          width={100}
-          height={100}
+          width={400}
+          height={400}
           className="absolute right-0 bottom-0 w-22.25 h-25.75 lg:h-75 lg:w-55 object-fill z-30"
         />
       </div>

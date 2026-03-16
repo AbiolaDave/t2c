@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -9,22 +9,22 @@ import { useState } from "react";
 import TrackRateModal from "../SubscribeModal";
 
 const UpperFooter = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-    // const getUpdate = () => setIsOpen(true);
-    const closeModal = () => setIsOpen(false);
-  
-    const getUpdateBtn = () => {
-      document.getElementById("hero")?.scrollIntoView({
-        behavior: "smooth",
-      });
-      setIsOpen(true);
-    };
-  
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // const getUpdate = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
+  const getUpdateBtn = () => {
+    document.getElementById("hero")?.scrollIntoView({
+      behavior: "smooth",
+    });
+    setIsOpen(true);
+  };
+
   return (
     <>
-      <div className="relative overflow-hidden h-140 lg:h-235.5 bg-black p-4 font-sans">
+      <div className="relative overflow-hidden h-140 lg:h-235.5 bg-black p-4 font-sans max-w-[1600px] mx-auto">
         <div>
           <Image
             src="/euro.png"
@@ -264,10 +264,7 @@ const UpperFooter = () => {
         </div>
         <div className="flex flex-col lg:hidden md:hidden justify-evenly items-center mt-5 mb-10">
           <div className="flex gap-5">
-            <div
-              className="border rounded-full flex justify-center items-center 
-                h-7 w-7 sm:h-8.25 sm:w-8.25 border-white"
-            >
+            <div className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 border-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -278,10 +275,7 @@ const UpperFooter = () => {
               </svg>
             </div>
 
-            <div
-              className="border rounded-full flex justify-center items-center 
-                h-7 w-7 sm:h-8.25 sm:w-8.25 bg-black border-white overflow-hidden"
-            >
+            <div className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 bg-black border-white overflow-hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 320 512"
@@ -295,20 +289,14 @@ const UpperFooter = () => {
               </svg>
             </div>
 
-            <div
-              className="border rounded-full flex justify-center items-center 
-                h-7 w-7 sm:h-8.25 sm:w-8.25 border-white"
-            >
+            <div className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 border-white">
               <FontAwesomeIcon
                 icon={faXTwitter}
                 className="text-[14px] sm:text-[20px] text-white"
               />
             </div>
 
-            <div
-              className="border rounded-full flex justify-center items-center 
-                h-7 w-7 sm:h-8.25 sm:w-8.25 border-white"
-            >
+            <div className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 border-white">
               <FontAwesomeIcon
                 icon={faInstagram}
                 className="text-[14px] sm:text-[20px] text-white"
@@ -330,7 +318,7 @@ const UpperFooter = () => {
         </div>
       </div>
 
-       <TrackRateModal isOpen={isOpen} onClose={closeModal} />
+      <TrackRateModal isOpen={isOpen} onClose={closeModal} />
     </>
   );
 };

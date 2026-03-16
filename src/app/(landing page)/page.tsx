@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <>
       {/* <Hero /> */}
-      <Hero1 />
+      <div className="overflow-x-hidden overflow-x-hidden!">
+        <Hero1 />
+      </div>
     </>
   );
 }

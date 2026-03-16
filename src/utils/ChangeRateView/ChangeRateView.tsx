@@ -20,7 +20,7 @@ const ChangeRateView = ({
   return (
     <>
       {amount > 0 ? (
-        <div className="bg-[#F6FFFC]">
+        <div className="bg-[#F6FFFC] max-w-[1600px] mx-auto">
           <CurrentMarketRate
             amount={amount}
             fromCurrency={fromCurrency}
@@ -30,7 +30,7 @@ const ChangeRateView = ({
         </div>
       ) : (
         <>
-          <div className="bg-[#F6FFFC]">
+          <div className="bg-[#F6FFFC] max-w-[1600px] mx-auto ">
             <Main />
             <Rate />
             <Trust />

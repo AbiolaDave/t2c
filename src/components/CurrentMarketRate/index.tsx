@@ -62,9 +62,9 @@ const CurrentMarketRate = ({
   return (
     <div
       id="main"
-      className="flex flex-col lg:min-h-screen items-center justify-center overflow-hidden! p-4 bg-[#F6FFFC] font-sans -ml-8 md:ml-0  lg:ml-0 -mt-30 lg:-mt-5 pt-40"
+      className="relative flex flex-col  items-center justify-center overflow-x-hidden! p-4 bg-[#F6FFFC] font-sans -ml-8 md:ml-0  lg:ml-0 -mt-30 lg:-mt-5 z-50 pt-40 max-w-[1600px]"
     >
-      <div className="flex flex-col md:flex-row md:gap-3 lg:gap-10 justify-between items-center w-272.5 md:w-160 lg:w-272.5">
+      <div className="flex flex-col md:flex-row md:gap-3 lg:gap-10 justify-between items-center w-272.5 md:w-160 lg:w-272.5 ">
         <div className="md:ml-0 -ml-20">
           <h1 className="text-[27.24px]/[24.97px] lg:text-[48px]/[44px] font-light font-sunflower max-w-[170px] lg:max-w-69.75 text-[#0F1729]">
             Current Market Rates
@@ -112,13 +112,14 @@ const CurrentMarketRate = ({
                     : "w-[350px] ml-8 -mt-5 md:-mt-10 lg:mt-0 lg:ml-0 h-[73px] lg:w-99.75 lg:h-32.25 mb-5 border rounded-[11.35px] lg:rounded-[20px] bg-[#EDF8F5] border-[#EBEBEB] text-black flex justify-center items-center gap-4"
                 }
               >
-                <Image
-                  src={provider.logo}
-                  alt={provider.name}
-                  width={100}
-                  height={100}
-                  className="w-[40.86px] h-[40.86px] lg:w-18 lg:h-18 lg:ml-4 lg:mt-4"
-                />
+                <div className="w-[40.86px] h-[40.86px] lg:w-18 lg:h-18 lg:ml-4 lg:mt-4 rounded-[50%] overflow-hidden">
+                  <Image
+                    src={provider.logo}
+                    alt={provider.name}
+                    width={100}
+                    height={100}
+                  />
+                </div>
                 <div>
                   <div className="flex items-center">
                     <div>
@@ -214,7 +215,7 @@ const CurrentMarketRate = ({
         />
       </div>
 
-      <div className="min-h-screen w-screen lg:w-full overflow-hidden mt-10 lg:mt-20 p-4  ml-8 md:ml-12 font-sans lg:ml-50">
+      <div className="w-screen lg:w-full overflow-x-hidden mt-10 lg:mt-0 p-4  ml-8 md:ml-12 font-sans lg:ml-50 ">
         <div className="">
           <h1 className="font-sunflower text-[#0F1729] font-light text-[40px]/[38.16px]  lg:text-[71px]/[67px] max-w-125">
             Trends
@@ -223,19 +224,21 @@ const CurrentMarketRate = ({
 
         <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-3 lg:gap-10 mt-10 2xl:max-w-full 2xl:gap-50">
           <div className="md:w-120 lg:w-187 md:h-100.5 rounded-[14px] bg-white border border-[#E1E7EF80] p-4 relative z-30">
-            <div className="flex items-center">
-              <Image
-                className="w-11.5 h-11.5"
-                src={rateProvider.logo}
-                alt={rateProvider.name}
-                width={100}
-                height={100}
-              />
+            <div className="flex items-center gap-2">
+              <div className="w-11.5 h-11.5 rounded-[50%] overflow-hidden">
+                <Image
+                  className=" "
+                  src={rateProvider.logo}
+                  alt={rateProvider.name}
+                  width={100}
+                  height={100}
+                />
+              </div>
               <h1 className="text-[#0F1729] font-sunflower font-bold text-[20px]/[31px]">
                 Rate History: {rateProvider.name}
               </h1>
             </div>
-            {/* Only render chart when container is ready */}
+            {/* Only render chart when container is ready overflow */}
             {chartReady && (
               <div className="w-full mt-10 md:mt-0 h-85">
                 <RateChart />
@@ -281,13 +284,13 @@ const CurrentMarketRate = ({
             </div>
           </div>
         </div>
-        <div className="overflow-hidden! w-full">
+        <div className="overflow-x-hidden! z-50 w-full">
           <Image
             src="/coinhalf.png"
             alt="coinhalf"
             width={400}
             height={400}
-            className="absolute w-32.25 h-25.75  -right-10 lg:h-75 -mt-5 lg:w-55  lg:-mt-10 object-fill z-30"
+            className="absolute w-32.25 h-25.75  -right-10 lg:h-75 -mt-5 lg:w-55  lg:-mt-30 object-fill z-30"
           />
         </div>
         <div className="block md:hidden">
@@ -296,7 +299,7 @@ const CurrentMarketRate = ({
             alt="vector"
             width={400}
             height={500}
-            className="w-29.75 h-73.75 -mt-30  absolute  z-0"
+            className="w-29.75 h-73.75 -mt-30  absolute  z-50"
           />
         </div>
       </div>
