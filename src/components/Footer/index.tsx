@@ -24,7 +24,7 @@ const UpperFooter = () => {
 
   return (
     <>
-      <div className="relative overflow-hidden h-140 lg:h-235.5 bg-black p-4 font-sans max-w-[1600px] mx-auto">
+      <div className="relative overflow-hidden h-140 lg:h-235.5 bg-black p-4 font-sans w-full mx-auto">
         <div>
           <Image
             src="/euro.png"
@@ -61,7 +61,7 @@ const UpperFooter = () => {
             alt="Euro Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute ml-90 md:right-50 z-10 xl:ml-320"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute right-20 md:right-40 lg:right-20 2xl:right-40 z-10"
           />
 
           <Image
@@ -69,30 +69,29 @@ const UpperFooter = () => {
             alt="Dollar Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute ml-85 md:right-20 z-10 xl:ml-330"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute right-10 md:right-20 lg:right-10 2xl:right-32 z-10"
           />
           <Image
             src="/yen.png"
             alt="Yen Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute ml-90 md:right-20 z-10 xl:ml-320"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute right-20 md:right-20 lg:right-20 2xl:right-40 z-10"
           />
           <Image
             src="/pound.png"
             alt="Pound Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute ml-80 md:right-50 z-10"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute right-14 md:right-40 lg:right-32 2xl:right-56 z-10"
           />
         </div>
-        <div className="w-full  h-82.25 mx-auto mt-40 lg:mt-70 z-30">
+        <div className="w-full h-82.25 mx-auto mt-40 lg:mt-70 z-30 max-w-4xl px-4">
           <div className="mx-auto">
-            <h1 className="relative z-10 font-sunflower font-medium  text-[40px]/[43.75px] md:text-[56px]/[57px] mx-auto text-center text-white max-w-70  md:max-w-169.25">
-              {" "}
+            <h1 className="relative z-10 font-sunflower font-medium text-[40px]/[43.75px] md:text-[56px]/[57px] mx-auto text-center text-white">
               Every Currency Rate In One Place
             </h1>
-            <p className="font-inter font-normal text-[12px]/[15.05px] md:text-[19px]/[27px] text-center text-[#8F8F8F] max-w-60   md:max-w-127 mx-auto relative z-30">
+            <p className="font-inter font-normal text-[12px]/[15.05px] md:text-[19px]/[27px] text-center text-[#8F8F8F] mx-auto relative z-30">
               Information overload is a thing of the past. We aggregate the
               latest market data and project updates so you can focus on making
               informed decisions without the clutter.
@@ -112,7 +111,7 @@ const UpperFooter = () => {
         </div>
 
         {/* Vector 2 - bottom center */}
-        <div className="absolute -bottom-10 left-80 lg:left-140 xl:left-180 w-[108.35px] h-[181.02px] lg:w-[518px] lg:h-[551px] z-0">
+        <div className="absolute -bottom-10 left-1/3 lg:left-1/2 transform lg:-translate-x-1/2 w-[108.35px] h-[181.02px] lg:w-[518px] lg:h-[551px] z-0">
           <Image
             src="/vector.png"
             alt="vector"
@@ -122,7 +121,7 @@ const UpperFooter = () => {
         </div>
 
         {/* Vector 3 - bottom right */}
-        <div className="absolute bottom-20 -right-60 w-[108.35px] h-[181.02px] lg:w-[518px] lg:h-[551px] xl:-right-80 z-0">
+        <div className="absolute bottom-20 right-0 lg:-right-20 2xl:-right-32 w-[108.35px] h-[181.02px] lg:w-[518px] lg:h-[551px] z-0">
           <Image
             src="/vector.png"
             alt="vector"
@@ -132,8 +131,8 @@ const UpperFooter = () => {
         </div>
       </div>
       {/* Lower Footer */}
-      <div className=" w-full bg-black h-126.25  lg:h-146.25 mt-0">
-        <div className="flex w-full justify-around pl-10 lg:pl-0 gap-8 lg:gap-0 items-center h-116.25">
+      <div className=" w-full bg-black h-126.25 lg:h-146.25 mt-0">
+        <div className="flex w-full max-w-7xl mx-auto justify-around px-4 lg:px-0 gap-8 lg:gap-0 items-center h-116.25">
           <div className="h-56.75 flex flex-col justify-evenly gap-4">
             <p className="font-sunflower font-bold text-[13px] lg:text-[30px] text-white">
               Contact

@@ -56,9 +56,9 @@ const CurrentMarketRate = ({
   return (
     <div
       id="main"
-      className=" flex flex-col  items-center justify-center overflow-x-hidden p-4 bg-[#F6FFFC] font-sans -ml-8 md:ml-0  lg:ml-0 -mt-30 lg:-mt-5 z-50 pb-30 pt-40 max-w-[1600px]"
+      className=" flex flex-col  items-center justify-center overflow-x-hidden p-4 bg-[#F6FFFC] font-sans ml-0 -mt-30 lg:-mt-5 z-50 pb-30 pt-40 w-full"
     >
-      <div className="flex flex-col md:flex-row md:gap-3 lg:gap-10 justify-between items-center w-272.5 md:w-160 lg:w-full lg:justify-center 2xl:justify-around">
+      <div className="flex flex-col md:flex-row md:gap-3 lg:gap-10 justify-between items-center w-full max-w-7xl mx-auto lg:justify-center 2xl:justify-around px-4">
         <AmountInput
           amount={amount}
           amountInput={amountInput}
@@ -73,13 +73,13 @@ const CurrentMarketRate = ({
         />
       </div>
 
-      <div>
+      <div className="hidden lg:block">
         <Image
           src="/vectormid.png"
           alt="vector"
           width={400}
           height={500}
-          className="w-49.75 h-103.75 absolute -ml-180.5 -mt-28.5 z-0"
+          className="w-49.75 h-103.75 absolute -ml-40 lg:-ml-180.5 -mt-28.5 z-0"
         />
       </div>
 

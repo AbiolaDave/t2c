@@ -68,11 +68,11 @@ const Hero1 = () => {
       <div
         id="hero"
         style={{ overflowX: "clip" }}
-        className="relative flex items-center justify-center p-2 md:p-4 2xl:p-6 bg-[#F6FFFC] font-sans max-w-[1600px] mx-auto z-20"
+        className="relative flex items-center justify-center p-2 md:p-4 2xl:p-6 bg-[#F6FFFC] font-sans w-full mx-auto z-20"
       >
         <main
           style={{ overflowX: "clip" }}
-          className="md:h-205 h-175 mt-0 lg:mt-0 lg:h-205.75 rounded-b-[20.96px] lg:rounded-[39px] bg-[#121421] md:px-5 lg:px-20 max-w-[1600px]!"
+          className="md:h-205 h-175 mt-0 lg:mt-0 lg:h-205.75 rounded-b-[20.96px] lg:rounded-[39px] bg-[#121421] md:px-5 lg:px-20 w-full max-w-7xl!"
         >
           <div className="relative">
             <div className="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-20 md:mt-10 font-sunflower">
@@ -146,7 +146,7 @@ const Hero1 = () => {
             </div>
             {/* Text + Glass Morphism */}
             <div className="w-full relative">
-              <div className="absolute -left-30">
+              <div className="absolute -left-20 lg:-left-30">
                 <div className="rounded-[100%] border bg-[#3CAE8C] w-61.25 h-61.25 blur-3xl"></div>
               </div>
               {/* Text */}
@@ -173,7 +173,7 @@ const Hero1 = () => {
             <div className="max-w-[1280px] mx-auto px-6 lg:px-10 z-30 relative mt-10 lg:mt-30">
               <div
                 id="compare"
-                className=" max-w-89.75 h-76.5 md:max-w-full lg:w-251.25 lg:max-w-full lg:h-60.5 border-2 lg:border-4 rounded-[16.68px] lg:rounded-4xl   border-[#3CAE8C] flex flex-col pt-5 lg:pt-0 "
+                className=" max-w-89.75 h-76.5 md:max-w-full lg:max-w-5xl 2xl:max-w-6xl lg:w-251.25 lg:h-60.5 border-2 lg:border-4 rounded-[16.68px] lg:rounded-4xl   border-[#3CAE8C] flex flex-col pt-5 lg:pt-0 "
               >
                 <div className="flex flex-col lg:flex-row justify-start lg:justify-around items-center md:items-start lg:items-center h-full">
                   <div className="flex flex-col -ml-12 md:ml-10 lg:ml-0 lg:flex-row lg:gap-18">
