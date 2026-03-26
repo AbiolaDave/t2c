@@ -8,7 +8,7 @@ const Main = () => {
         id="main"
         className="relative flex flex-col items-center justify-center bg-[#F6FFFC] font-sans lg:mt-0 lg:pt-20 w-full"
       >
-        <div className="flex justify-around items-center w-full max-w-7xl mx-auto px-4">
+        <div className="flex justify-around items-center w-full px-4">
           <div className=" w-49.5 h-[182.41px] lg:w-77.5 lg:h-77.5">
             <Image
               className="w-full h-full object-contain"
@@ -38,7 +38,7 @@ const Main = () => {
             className="w-49.75 h-103.75 xl:w-89 absolute left-0 mt-12.5 z-0"
           />
         </div>
-        <div className="w-full max-w-7xl mx-auto px-5 md:px-20 lg:px-10 mt-5 lg:mt-0 flex flex-col gap-2.5">
+        <div className="w-full px-5 md:px-20 lg:px-10 mt-5 lg:mt-0 flex flex-col gap-2.5">
           <div className="overflow-hidden w-full">
             <div className="flex  gap-2.5 marquee-reverse">
               {[...RatesProviders, ...RatesProviders].map((provider, i) => (

@@ -58,7 +58,7 @@ const CurrentMarketRate = ({
       id="main"
       className=" flex flex-col items-center justify-center overflow-x-hidden bg-[#F6FFFC] font-sans -mt-30 lg:-mt-5 z-50 pb-30 pt-40 w-full"
     >
-      <div className="flex flex-col md:flex-row md:gap-3 lg:gap-10 justify-between items-center w-full max-w-7xl mx-auto lg:justify-center 2xl:justify-around px-4 py-4">
+      <div className="flex flex-col md:flex-row md:gap-3 lg:gap-10 justify-between items-center w-full lg:justify-center 2xl:justify-around px-4 py-4">
         <AmountInput
           amount={amount}
           amountInput={amountInput}

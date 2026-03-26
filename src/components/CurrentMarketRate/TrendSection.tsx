@@ -19,7 +19,7 @@ const TrendsSection = ({
   onProviderClick: (provider: RatesProviderType, i: number) => void;
 }) => {
   return (
-    <div className="relative w-full overflow-x-hidden mt-10 lg:mt-0 p-4 ml-0 font-sans max-w-7xl mx-auto">
+    <div className="relative w-full overflow-x-hidden mt-10 lg:mt-0 p-4 ml-0 font-sans">
       <div className="">
         <h1 className="font-sunflower text-[#0F1729] font-light text-[40px]/[38.16px]  lg:text-[71px]/[67px] max-w-125">
           Trends

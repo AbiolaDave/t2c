@@ -86,7 +86,7 @@ const UpperFooter = () => {
             className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute right-3 md:right-20 lg:right-8 2xl:-right-6 z-10"
           />
         </div>
-        <div className="w-full h-82.25 mx-auto mt-40 lg:mt-70 z-30 max-w-4xl px-4">
+        <div className="w-full h-82.25 mt-40 lg:mt-70 z-30 px-4">
           <div className="mx-auto">
             <h1 className="relative z-10 font-sunflower font-medium text-[40px]/[43.75px] md:text-[56px]/[57px] mx-auto text-center text-white">
               Every Currency Rate In One Place
@@ -132,7 +132,7 @@ const UpperFooter = () => {
       </div>
       {/* Lower Footer */}
       <div className=" w-full bg-black h-126.25 lg:h-146.25 mt-0">
-        <div className="flex w-full max-w-7xl mx-auto justify-around px-4 gap-8 lg:gap-0 items-center h-116.25">
+        <div className="flex w-full justify-around px-4 gap-8 lg:gap-0 items-center h-116.25">
           <div className="h-56.75 flex flex-col justify-evenly gap-4">
             <p className="font-sunflower font-bold text-[13px] lg:text-[30px] text-white">
               Contact
