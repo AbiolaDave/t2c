@@ -68,11 +68,11 @@ const Hero1 = () => {
       <div
         id="hero"
         style={{ overflowX: "clip" }}
-        className="relative flex items-center justify-center p-2 md:p-4 2xl:p-6 bg-[#F6FFFC] font-sans w-full mx-auto z-20"
+        className="relative flex items-center justify-center bg-[#F6FFFC] font-sans w-full z-20"
       >
         <main
           style={{ overflowX: "clip" }}
-          className="md:h-205 h-175 mt-0 lg:mt-0 lg:h-205.75 rounded-b-[20.96px] lg:rounded-[39px] bg-[#121421] md:px-5 lg:px-20 w-full max-w-7xl!"
+          className="md:h-205 h-175 mt-0 lg:mt-0 lg:h-205.75 rounded-b-[20.96px] lg:rounded-[39px] bg-[#121421] md:px-5 lg:px-20 w-full max-w-7xl md:p-4 2xl:p-6"
         >
           <div className="relative">
             <div className="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-20 md:mt-10 font-sunflower">

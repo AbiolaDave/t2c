@@ -6,7 +6,7 @@ const Main = () => {
     <>
       <div
         id="main"
-        className="relative flex flex-col items-center justify-center  bg-[#F6FFFC] font-sans lg:mt-0 lg:pt-20 mx-auto w-full"
+        className="relative flex flex-col items-center justify-center bg-[#F6FFFC] font-sans lg:mt-0 lg:pt-20 w-full"
       >
         <div className="flex justify-around items-center w-full max-w-7xl mx-auto px-4">
           <div className=" w-49.5 h-[182.41px] lg:w-77.5 lg:h-77.5">

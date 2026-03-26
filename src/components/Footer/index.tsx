@@ -24,35 +24,35 @@ const UpperFooter = () => {
 
   return (
     <>
-      <div className="relative overflow-hidden h-140 lg:h-235.5 bg-black p-4 font-sans w-full mx-auto">
+      <div className="relative overflow-hidden h-140 lg:h-235.5 bg-black font-sans w-full">
         <div>
           <Image
             src="/euro.png"
             alt="Euro Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-10 lg:mt-20.25 absolute ml-14 lg:ml-39.25 z-10"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-10 lg:mt-20.25 absolute ml-2 lg:ml-10 2xl:ml-0 z-10"
           />
           <Image
             src="/pound.png"
             alt="Pound Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20 lg:mt-30.25 absolute ml-8 lg:ml-12 z-20"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20 lg:mt-30.25 absolute ml-2 lg:ml-2 2xl:-ml-2 z-20"
           />
           <Image
             src="/dollar.png"
             alt="Dollar Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-30 lg:mt-70.25 absolute -ml-4 lg:ml-2 z-30"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-30 lg:mt-70.25 absolute -ml-4 lg:-ml-8 2xl:-ml-10 z-30"
           />
           <Image
             src="/naira.png"
             alt="Naira Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-45 lg:mt-90.25 absolute ml-2 lg:ml-39.25 z-40"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-45 lg:mt-90.25 absolute ml-0 lg:ml-8 2xl:ml-2 z-40"
           />
         </div>
         <div>
@@ -61,7 +61,7 @@ const UpperFooter = () => {
             alt="Euro Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute right-20 md:right-40 lg:right-20 2xl:right-40 z-10"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-20.25 absolute right-4 md:right-20 lg:right-4 2xl:right-2 z-10"
           />
 
           <Image
@@ -69,21 +69,21 @@ const UpperFooter = () => {
             alt="Dollar Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute right-10 md:right-20 lg:right-10 2xl:right-32 z-10"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-40 lg:mt-70.25 absolute right-2 md:right-12 lg:right-2 2xl:-right-2 z-10"
           />
           <Image
             src="/yen.png"
             alt="Yen Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute right-20 md:right-20 lg:right-20 2xl:right-40 z-10"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-60 lg:mt-110.25 absolute right-6 md:right-12 lg:right-6 2xl:-right-4 z-10"
           />
           <Image
             src="/pound.png"
             alt="Pound Coin"
             width={100}
             height={100}
-            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute right-14 md:right-40 lg:right-32 2xl:right-56 z-10"
+            className="w-[40.04px] h-[35.78px] lg:w-23.25 lg:h-21.25 mt-90 lg:mt-160.25 absolute right-3 md:right-20 lg:right-8 2xl:-right-6 z-10"
           />
         </div>
         <div className="w-full h-82.25 mx-auto mt-40 lg:mt-70 z-30 max-w-4xl px-4">
@@ -132,7 +132,7 @@ const UpperFooter = () => {
       </div>
       {/* Lower Footer */}
       <div className=" w-full bg-black h-126.25 lg:h-146.25 mt-0">
-        <div className="flex w-full max-w-7xl mx-auto justify-around px-4 lg:px-0 gap-8 lg:gap-0 items-center h-116.25">
+        <div className="flex w-full max-w-7xl mx-auto justify-around px-4 gap-8 lg:gap-0 items-center h-116.25">
           <div className="h-56.75 flex flex-col justify-evenly gap-4">
             <p className="font-sunflower font-bold text-[13px] lg:text-[30px] text-white">
               Contact
