@@ -22,6 +22,11 @@ const data = [
   { date: "23 Jan", value: 2216 },
   { date: "24 Jan", value: 2220 },
   { date: "25 Jan", value: 2225 },
+  { date: "26 Jan", value: 2223 },
+  { date: "27 Jan", value: 2226 },
+  { date: "28 Jan", value: 2221 },
+  { date: "29 Jan", value: 2220 },
+  { date: "30 Jan", value: 2210 },
 ];
 
 const MARGIN = { top: 0, right: 16, bottom: 36, left: 48 };
@@ -297,7 +302,7 @@ export default function RateChart() {
         <div
           ref={scrollRef}
           className="rate-scroll absolute inset-0 overflow-x-scroll overflow-y-hidden"
-          style={{ paddingLeft: 0 }}
+          style={{ paddingLeft: 0, maxWidth: "100%" }}
         >
           <svg ref={svgRef} style={{ display: "block" }} />
         </div>

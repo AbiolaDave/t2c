@@ -68,11 +68,11 @@ const Hero1 = () => {
       <div
         id="hero"
         style={{ overflowX: "clip" }}
-        className="relative flex items-center justify-center p-2 md:p-4 2xl:p-6 bg-[#F6FFFC] font-sans max-w-[1600px] mx-auto z-20"
+        className="relative flex items-center justify-center p-2 md:p-0 md:px-2 bg-[#F6FFFC] font-sans max-w-[1600px] mx-auto z-20"
       >
         <main
           style={{ overflowX: "clip" }}
-          className="md:h-205 h-175 mt-0 lg:mt-0 lg:h-205.75 rounded-b-[20.96px] lg:rounded-[39px] bg-[#121421] md:px-5 lg:px-20 max-w-[1600px]!"
+          className="md:h-205 h-175 mt-0 lg:mt-0 lg:h-205.75 rounded-b-[20.96px] lg:rounded-b-[39px] bg-[#121421] md:px-5 lg:px-0 w-full max-w-[1600px]"
         >
           <div className="relative">
             <div className="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-20 md:mt-10 font-sunflower">
@@ -168,8 +168,9 @@ const Hero1 = () => {
             </div>
           </div>
           {/* Inputs Border */}
-          <div className="relative isolate">
-            <div className="absolute -ml-30 lg:ml-3.25 mt-8 rounded-[100%] bg-[#3CAE8C]  w-61.25 h-61.25 blur-3xl z-0"></div>
+          {/* Inputs Border */}
+          <div className="w-full">
+            <div className="absolute -ml-30 lg:ml-3.25 mt-8 rounded-[100%] bg-[#3CAE8C] w-61.25 h-61.25 blur-3xl z-0"></div>
             <div className="max-w-[1280px] mx-auto px-6 lg:px-10 z-30 relative mt-10 lg:mt-30">
               <div
                 id="compare"
