@@ -31,7 +31,7 @@ const Hero1 = () => {
 
   const formik = useFormik({
     initialValues: {
-      amount: "",
+      amount: 0,
     },
     onSubmit: (values) => {
       // if (!formik.isValid) return;
@@ -41,7 +41,10 @@ const Hero1 = () => {
       });
     },
     validationSchema: yup.object({
-      amount: yup.number(),
+      amount: yup
+        .number()
+        .required("Please enter a number")
+        .min(1, "Minimun value is 1"),
     }),
   });
   const navDirect = (params: string) => {
@@ -62,9 +65,14 @@ const Hero1 = () => {
     }
   };
 
+  const returnHome = () => {
+    formik.values.amount = 0;
+    setAmountValue(0);
+  };
+
   return (
     <>
-      {/* overflow */}
+      {/* overflow Tap2Compare */}
       <div
         id="hero"
         style={{ overflowX: "clip" }}
@@ -83,7 +91,12 @@ const Hero1 = () => {
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                   />
                 </div>
-                <p className="text-white text-[18px] font-light">Tap2Compare</p>
+                <p
+                  onClick={returnHome}
+                  className="text-white text-[18px] font-light cursor-pointer"
+                >
+                  Tap2Compare
+                </p>
               </div>
               <div className="hidden md:flex lg:flex justify-evenly items-center lg:gap-10 md:gap-5">
                 <h1
@@ -151,8 +164,8 @@ const Hero1 = () => {
               </div>
               {/* Text */}
               <div className="relative z-30 mt-10 md:mt-32">
-                <div className="lg:max-w-[1280px] mx-auto px-6 lg:px-10">
-                  <h1 className="font-light text-[40px]/[40px] md:text-[65px]/[75px] lg:text-[75px]/[75px] font-sunflower  text-[#F8FAFC] max-w-75 md:max-w-[700px] lg:max-w-4xl">
+                <div className="lg:max-w-[1280px] @container mx-auto px-6 lg:px-10">
+                  <h1 className="font-light text-[40px]/[40px] md:text-[60px]/[75px] min[1031px]:text-[75px]/[75px] font-sunflower text-[#F8FAFC] max-w-75 md:max-w-[700px]  min-[1031]:max-w-4xl min-[600px]:text-[60px]/[75px] min-[744px]:text-[60px]/[75px] min-[600px]:max-w-[700px] min-[1024px]:max-[1030px]:text-[20px]/[65px] min-[1000px]:max-[1030px]:max-w-4xl">
                     Compare Exchange Rates{" "}
                     <span className="text-[#D9D9D9]">Across Platforms</span>
                   </h1>
@@ -174,11 +187,11 @@ const Hero1 = () => {
               {/* lg:w-251.25 */}
               <div
                 id="compare"
-                className=" max-w-89.75 h-76.5 md:max-w-full  lg:max-w-full lg:h-60.5 border-2 lg:border-4 rounded-[16.68px] lg:rounded-4xl   border-[#3CAE8C] flex flex-col pt-5 lg:pt-0 "
+                className=" max-w-full h-76.5 md:max-w-full  lg:max-w-full lg:h-60.5 border-2 lg:border-4 rounded-[16.68px] lg:rounded-4xl   border-[#3CAE8C] flex flex-col pt-5 lg:pt-0 "
               >
                 <div className="flex flex-col lg:flex-row  lg:justify-around items-center md:items-start lg:items-center h-full px-5 lg:px-10 lg:gap-5">
                   {/* <div className="flex flex-col bg-purple-600 -ml-12 md:ml-10 lg:ml-0 lg:flex-row lg:gap-18"> */}
-                  <div className=" w-full ">
+                  <div className=" w-full">
                     <label className="text-white">
                       <h1>From</h1>
                     </label>
@@ -190,14 +203,8 @@ const Hero1 = () => {
                       />
                     </div>
                   </div>
-                  {/* <button
-                    onClick={swapCurrencies}
-                    className="border-3 w-11.75 h-11.75 lg:w-13.75 lg:h-13.75 rounded-full flex flex-col justify-center cursor-pointer items-center border-[#EBEBEB] bg-black text-white absolute ml-32 lg:mt-9 mt-14 md:ml-68 lg:-ml-82 z-3"
-                  >
-                    <ArrowLeftRight className="hidden lg:block" size={30} />
-                    <ArrowUpDown size={25} className="block lg:hidden" />
-                  </button> */}
-                  <div className="lg:-mt-6 z-10 -ml-10  -mt-3 lg:-ml-10 w-[0px] lg:h-[full] h-[0px]">
+
+                  <div className="lg:-mt-6 z-10 -ml-10 md:mx-auto -mt-3 lg:-ml-10 w-[0px] lg:h-[full] h-[0px]">
                     <button
                       onClick={swapCurrencies}
                       className="border-3 w-11.75 h-11.75 lg:w-13.75 lg:h-13.75 rounded-full flex flex-col justify-center cursor-pointer items-center border-[#EBEBEB] bg-black text-white"
@@ -206,7 +213,7 @@ const Hero1 = () => {
                       <ArrowUpDown size={25} className="block lg:hidden" />
                     </button>
                   </div>
-                  <div className="lg:ml-5 mt-3 md:mt-0 w-full">
+                  <div className="lg:ml-5 mt-3 lg:mt-0 w-full">
                     <label className="text-white">
                       <h1>To</h1>
                     </label>
@@ -220,7 +227,7 @@ const Hero1 = () => {
                   </div>
                   {/* </div> */}
 
-                  <div className="ml-0 md:ml-10 lg:ml-0 w-full">
+                  <div className="ml-0 md:ml-0 lg:ml-0 w-full">
                     <label className="text-white" htmlFor="">
                       <h1>Amount</h1>
                     </label>
@@ -232,16 +239,22 @@ const Hero1 = () => {
                       onBlur={formik.handleBlur}
                       className={
                         formik.errors.amount && formik.touched.amount
-                          ? "w-[283.32px] max-w-[293.32px] h-[45.21px] md:min-w-[620px] lg:min-w-full  lg:w-[297.13px] lg:h-19 rounded-[8.17px] bg-red-100  lg:rounded-[15px] border border-[#3CAE8C] px-4 flex items-center justify-between text-black font-sunflower font-bold text-[23px] hover:bg-gray-50 transition-colors"
-                          : "w-[283.32px] max-w-[293.32px] h-[45.21px] md:min-w-[620px] lg:min-w-full lg:w-[297.13px] lg:h-19 bg-white border border-[#3CAE8C] rounded-[8.17px] lg:rounded-[15px] px-4 flex items-center justify-between text-black font-sunflower font-bold text-[23px] hover:bg-gray-50 transition-colors"
+                          ? "w-full min-w-full max-w-full h-[45.21px] md:min-w-full lg:min-w-full  lg:w-full lg:h-19 rounded-[8.17px] bg-red-100  lg:rounded-[15px] border border-[#3CAE8C] px-4 flex items-center justify-between text-black font-sunflower font-bold text-[23px] hover:bg-gray-50 transition-colors"
+                          : "w-full min-w-full max-w-full h-[45.21px] md:min-w-full lg:min-w-full lg:w-full lg:h-19 bg-white border border-[#3CAE8C] rounded-[8.17px] lg:rounded-[15px] px-4 flex items-center justify-between text-black font-sunflower font-bold text-[23px] hover:bg-gray-50 transition-colors"
                       }
                     />
+                    <div>
+                      <small className="text-red-400">
+                        {formik.touched.amount ? formik.errors.amount : ""}
+                      </small>
+                    </div>
                   </div>
                 </div>
                 <div className="flex justify-end mx-auto mt-3 lg:mr-20 mb-8">
                   <button
                     type="submit"
                     onClick={() => formik.handleSubmit()}
+                    // onChange={formik.handleChange}
                     className="bg-[#3CAE8C] text-white w-[113.9px] h-[43.96px] lg:w-[137.15px] lg:h-[52.94px] rounded-[100%] z-30 cursor-pointer rotation-[3.04deg] px-2"
                   >
                     <h1 className="text-white text-[13.99px] lg:text-[16.84px] font-light">
@@ -251,6 +264,7 @@ const Hero1 = () => {
                   <button
                     type="submit"
                     onClick={() => formik.handleSubmit()}
+                    // onChange={formik.handleChange}
                     className="border border-r-[#000000] border-t-[#000000] border-b-[#666666] border-l-[#666666] text-white w-[113.9px] h-[43.96px] lg:w-[137.15px] lg:h-[52.94px] rounded-[100%] z-0 absolute rotate-[-10.49deg]"
                   ></button>
                 </div>

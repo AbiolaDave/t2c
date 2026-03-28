@@ -47,12 +47,12 @@ const CurrentMarketRate = ({
   );
 
   // Handle input change
-  const handleAmountChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      setAmountInput(Number(e.target.value) || 0);
-    },
-    [],
-  );
+  // const handleAmountChange = useCallback(
+  //   (e: React.ChangeEvent<HTMLInputElement>) => {
+  //     setAmountInput(Number(e.target.value) || 0);
+  //   },
+  //   [],
+  // );
 
   return (
     <div
@@ -87,7 +87,8 @@ const CurrentMarketRate = ({
             <input
               type="number"
               value={amountInput}
-              onChange={handleAmountChange}
+              readOnly
+              // onChange={handleAmountChange}
               className="w-full h-full bg-white rounded-[14px] border-[1.2px] border-[#EBEBEB] px-5 text-transparent caret-black focus:outline-none"
               aria-label="Amount to send"
             />
@@ -162,7 +163,7 @@ const CurrentMarketRate = ({
                     className="text-[#94A3B8] text-[22px]"
                   />
                 </div>
-                <div className="w-[180px] h-[65px] -mt-5 md:mt-0 ml-8 lg:-mt-0 lg:ml-0 lg:min-w-94.25 lg:h-20 border flex bg-white items-center justify-around rounded-[14px] border-[#EBEBEB]">
+                <div className="w-[180px] h-[65px] px-5 -mt-5 md:mt-0 ml-8 lg:-mt-0 lg:ml-0 lg:min-w-94.25 lg:h-20 border flex bg-white items-center justify-around rounded-[14px] border-[#EBEBEB]">
                   <div>
                     <h1 className="font-sunflower font-bold text-[14px] lg:text-[19px] text-black">
                       {toCurrency.symbol}{" "}

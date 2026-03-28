@@ -82,13 +82,13 @@ export function CurrencySelect({ value, options, onChange }: Props) {
       ref={containerRef}
       tabIndex={0}
       onKeyDown={handleKeyDown}
-      className="relative w-full outline-none text-black"
+      className="relative w-full outline-none text-black "
     >
       {/* Trigger */}
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="w-[283.32px] max-w-[293.32px] h-[45.21px] md:min-w-[620px] lg:min-w-full lg:w-full lg:h-19 bg-white border border-[#3CAE8C] rounded-[8.17px] lg:rounded-[15px] px-4 flex items-center justify-between"
+        className="w-full min-w-full max-w-[293.32px] h-[45.21px] md:min-w-full lg:min-w-full lg:w-full lg:h-19 bg-white border border-[#3CAE8C] rounded-[8.17px] lg:rounded-[15px] px-4 flex items-center justify-between "
       >
         <div className="flex items-center gap-3">
           <Image
@@ -102,7 +102,7 @@ export function CurrencySelect({ value, options, onChange }: Props) {
             <p className="font-bold text-[14px] text-black lg:text-[18px]">
               {value.code}
             </p>
-            <p className="text-[12px] lg:text-sm text-black truncate max-w-40 lg:-mt-1">
+            <p className="text-[12px] lg:text-sm text-black truncate min-w-28 max-w-28 md:max-w-40 lg:-mt-1">
               {value.name}
             </p>
           </div>
