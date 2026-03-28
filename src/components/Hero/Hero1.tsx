@@ -233,7 +233,9 @@ const Hero1 = () => {
                     </label>
 
                     <input
-                      value={formik.values.amount}
+                      value={
+                        formik.values.amount > 0 ? formik.values.amount : ""
+                      }
                       onChange={formik.handleChange}
                       name="amount"
                       onBlur={formik.handleBlur}
