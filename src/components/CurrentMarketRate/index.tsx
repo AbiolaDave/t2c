@@ -138,7 +138,7 @@ const CurrentMarketRate = ({
                   <hr />
                   <div>
                     <h1 className="font-sunflower font-medium text-[18px] lg:text-[21px]">
-                      {amountInput} {fromCurrency.code} = {toCurrency.symbol}{" "}
+                      1 {fromCurrency.code} = {toCurrency.symbol}{" "}
                       {provider.price}
                     </h1>
                   </div>
