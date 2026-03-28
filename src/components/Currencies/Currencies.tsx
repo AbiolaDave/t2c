@@ -82,13 +82,13 @@ export function CurrencySelect({ value, options, onChange }: Props) {
       ref={containerRef}
       tabIndex={0}
       onKeyDown={handleKeyDown}
-      className="relative w-60 outline-none text-black"
+      className="relative w-full outline-none text-black"
     >
       {/* Trigger */}
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="w-[283.32px] max-w-[293.32px] h-[45.21px] md:min-w-[620px] lg:min-w-[297.13px] lg:w-[297.13px] lg:h-19 bg-white border border-[#3CAE8C] rounded-[8.17px] lg:rounded-[15px] px-4 flex items-center justify-between"
+        className="w-[283.32px] max-w-[293.32px] h-[45.21px] md:min-w-[620px] lg:min-w-full lg:w-full lg:h-19 bg-white border border-[#3CAE8C] rounded-[8.17px] lg:rounded-[15px] px-4 flex items-center justify-between"
       >
         <div className="flex items-center gap-3">
           <Image
@@ -112,7 +112,7 @@ export function CurrencySelect({ value, options, onChange }: Props) {
 
       {/* Dropdown */}
       {open && (
-        <div className="absolute mt-2 w-[297.13px] bg-white rounded-xl shadow-lg z-50 text-black">
+        <div className="absolute mt-2 w-full bg-white rounded-xl shadow-lg z-50 text-black">
           {/* Sticky Search */}
           <div className="sticky top-0 bg-white z-10 p-3 border-b">
             <input

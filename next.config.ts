@@ -2,8 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
-
   images: {
+    unoptimized: true,
     remotePatterns: [
       // Existing
       {
@@ -16,7 +16,6 @@ const nextConfig: NextConfig = {
         hostname: "dummyjson.com",
         pathname: "/**",
       },
-
       // Currency / Flag sources
       {
         protocol: "https",
@@ -42,6 +41,17 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "raw.githubusercontent.com",
         pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "westernunion.com",
+        pathname: "/**",
+      },
+      // Rate provider logos
+      {
+        protocol: "https",
+        hostname: "www.google.com",
+        pathname: "/s2/favicons/**",
       },
     ],
   },

@@ -17,20 +17,19 @@ const Rate = () => {
   return (
     <div
       id="rate"
-      className="relative overflow-hidden mt-10 lg:mt-50 p-2 md:p-0 font-sans max-w-[1600px]"
+      className="relative overflow-hidden mt-10 lg:mt-50 p-2 md:p-0 font-sans max-w=[1600px]"
     >
       {/* ✅ padding instead of relative left */}
-      <div className="text-start  px-2">
+      <div className="text-start  px-[10%] xl:px-[15%]">
         <h1 className="font-sunflower text-[#3CAE8C] font-light text-[40px]/[38.16px] lg:text-[71px]/[67px] max-w-80 lg:max-w-125 relative">
           Track Exchange <span className="text-[#6F6F6F]">Rate Trends</span>
         </h1>
       </div>
 
       {/* ✅ padding + max-w to cap growth on very wide screens */}
-      <div className="flex flex-col-reverse lg:flex-row px-2 gap-6 md:gap-10 lg:gap-30 mt-5 w-full max-w-[1600px] mx-auto">
+      <div className="flex flex-col-reverse lg:flex-row px-[10%] xl:pl-[15%] gap-6 lg:gap-15 mt-5 max-w-[1600px]  2xl:max-w-full">
         {/* ✅ flex-1 so chart fills available space fluidly */}
-        {/* Change this div */}
-        <div className="flex-1 min-w-0 lg:h-100.5 rounded-[14px] bg-white border border-[#E1E7EF80] p-4">
+        <div className="flex-1  lg:h-100.5 rounded-[14px] bg-white border border-[#E1E7EF80] p-4">
           <div className="flex items-center gap-2">
             <div className="w-11.5 h-11.5 rounded-[50%] overflow-hidden">
               <Image
@@ -83,7 +82,7 @@ const Rate = () => {
         </div>
       </div>
 
-      <div className="mt-15 lg:mt-68">
+      <div className="mt-15 lg:mt-53">
         <Image
           src="/coinhalf.png"
           alt="coinhalf"

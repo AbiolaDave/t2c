@@ -68,11 +68,11 @@ const Hero1 = () => {
       <div
         id="hero"
         style={{ overflowX: "clip" }}
-        className="relative flex items-center justify-center p-2 md:p-0 md:px-2 bg-[#F6FFFC] font-sans max-w-[1600px] mx-auto z-20"
+        className="relative flex items-center justify-center p-2 md:pt-[25px] md:px-[29px] bg-[#F6FFFC] font-sans max-w-[1600px] mx-auto z-20"
       >
         <main
           style={{ overflowX: "clip" }}
-          className="md:h-205 h-175 mt-0 lg:mt-0 lg:h-205.75 rounded-b-[20.96px] lg:rounded-b-[39px] bg-[#121421] md:px-5 lg:px-0 w-full max-w-[1600px]"
+          className="md:h-205 h-175 mt-0 lg:mt-0 lg:h-205.75 rounded-b-[20.96px] lg:rounded-[39px] bg-[#121421] md:px-5 lg:px-20 w-full max-w-[1600px]!"
         >
           <div className="relative">
             <div className="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-20 md:mt-10 font-sunflower">
@@ -168,37 +168,49 @@ const Hero1 = () => {
             </div>
           </div>
           {/* Inputs Border */}
-          {/* Inputs Border */}
           <div className="w-full">
-            <div className="absolute -ml-30 lg:ml-3.25 mt-8 rounded-[100%] bg-[#3CAE8C] w-61.25 h-61.25 blur-3xl z-0"></div>
-            <div className="max-w-[1280px] mx-auto px-6 lg:px-10 z-30 relative mt-10 lg:mt-30">
+            <div className="absolute -ml-30 lg:ml-3.25 mt-8 rounded-[100%] bg-[#3CAE8C]  w-61.25 h-61.25 blur-3xl z-0"></div>
+            <div className="max-w-[1280px]  mx-auto px-6 lg:px-10 z-30 relative mt-10 lg:mt-30">
+              {/* lg:w-251.25 */}
               <div
                 id="compare"
-                className=" max-w-89.75 h-76.5 md:max-w-full lg:w-251.25 lg:max-w-full lg:h-60.5 border-2 lg:border-4 rounded-[16.68px] lg:rounded-4xl   border-[#3CAE8C] flex flex-col pt-5 lg:pt-0 "
+                className=" max-w-89.75 h-76.5 md:max-w-full  lg:max-w-full lg:h-60.5 border-2 lg:border-4 rounded-[16.68px] lg:rounded-4xl   border-[#3CAE8C] flex flex-col pt-5 lg:pt-0 "
               >
-                <div className="flex flex-col lg:flex-row justify-start lg:justify-around items-center md:items-start lg:items-center h-full">
-                  <div className="flex flex-col -ml-12 md:ml-10 lg:ml-0 lg:flex-row lg:gap-18">
-                    <div>
-                      <label className="text-white">
-                        <h1>From</h1>
-                      </label>
+                <div className="flex flex-col lg:flex-row  lg:justify-around items-center md:items-start lg:items-center h-full px-5 lg:px-10 lg:gap-5">
+                  {/* <div className="flex flex-col bg-purple-600 -ml-12 md:ml-10 lg:ml-0 lg:flex-row lg:gap-18"> */}
+                  <div className=" w-full ">
+                    <label className="text-white">
+                      <h1>From</h1>
+                    </label>
+                    <div className=" w-full">
                       <CurrencySelect
                         value={fromCurrency}
                         options={Currencies}
                         onChange={setFromCurrency}
                       />
                     </div>
+                  </div>
+                  {/* <button
+                    onClick={swapCurrencies}
+                    className="border-3 w-11.75 h-11.75 lg:w-13.75 lg:h-13.75 rounded-full flex flex-col justify-center cursor-pointer items-center border-[#EBEBEB] bg-black text-white absolute ml-32 lg:mt-9 mt-14 md:ml-68 lg:-ml-82 z-3"
+                  >
+                    <ArrowLeftRight className="hidden lg:block" size={30} />
+                    <ArrowUpDown size={25} className="block lg:hidden" />
+                  </button> */}
+                  <div className="lg:mt-6 z-10 -ml-10  -mt-3 lg:-ml-10 w-[0px] h-[0px]">
                     <button
                       onClick={swapCurrencies}
-                      className="border-3 w-11.75 h-11.75 lg:w-13.75 lg:h-13.75 rounded-full flex flex-col justify-center cursor-pointer items-center border-[#EBEBEB] bg-black text-white absolute ml-32 lg:mt-9 mt-14 md:ml-68 z-3"
+                      className="border-3 w-11.75 h-11.75 lg:w-13.75 lg:h-13.75 rounded-full flex flex-col justify-center cursor-pointer items-center border-[#EBEBEB] bg-black text-white"
                     >
                       <ArrowLeftRight className="hidden lg:block" size={30} />
                       <ArrowUpDown size={25} className="block lg:hidden" />
                     </button>
-                    <div>
-                      <label className="text-white">
-                        <h1>To</h1>
-                      </label>
+                  </div>
+                  <div className="lg:ml-5 mt-3 md:mt-0 w-full">
+                    <label className="text-white">
+                      <h1>To</h1>
+                    </label>
+                    <div className="w-full">
                       <CurrencySelect
                         value={toCurrency}
                         options={Currencies}
@@ -206,11 +218,13 @@ const Hero1 = () => {
                       />
                     </div>
                   </div>
+                  {/* </div> */}
 
-                  <div className="ml-0 md:ml-10 lg:ml-0">
+                  <div className="ml-0 md:ml-10 lg:ml-0 w-full">
                     <label className="text-white" htmlFor="">
                       <h1>Amount</h1>
                     </label>
+
                     <input
                       value={formik.values.amount}
                       onChange={formik.handleChange}
@@ -218,8 +232,8 @@ const Hero1 = () => {
                       onBlur={formik.handleBlur}
                       className={
                         formik.errors.amount && formik.touched.amount
-                          ? "w-[283.32px] max-w-[293.32px] h-[45.21px] md:min-w-[620px] lg:min-w-[297.13px]  lg:w-[297.13px] lg:h-19 rounded-[8.17px] bg-red-100  lg:rounded-[15px] border border-[#3CAE8C] px-4 flex items-center justify-between text-black font-sunflower font-bold text-[23px] hover:bg-gray-50 transition-colors"
-                          : "w-[283.32px] max-w-[293.32px] h-[45.21px] md:min-w-[620px] lg:min-w-[297.13px] lg:w-[297.13px] lg:h-19 bg-white border border-[#3CAE8C] rounded-[8.17px] lg:rounded-[15px] px-4 flex items-center justify-between text-black font-sunflower font-bold text-[23px] hover:bg-gray-50 transition-colors"
+                          ? "w-[283.32px] max-w-[293.32px] h-[45.21px] md:min-w-[620px] lg:min-w-full  lg:w-[297.13px] lg:h-19 rounded-[8.17px] bg-red-100  lg:rounded-[15px] border border-[#3CAE8C] px-4 flex items-center justify-between text-black font-sunflower font-bold text-[23px] hover:bg-gray-50 transition-colors"
+                          : "w-[283.32px] max-w-[293.32px] h-[45.21px] md:min-w-[620px] lg:min-w-full lg:w-[297.13px] lg:h-19 bg-white border border-[#3CAE8C] rounded-[8.17px] lg:rounded-[15px] px-4 flex items-center justify-between text-black font-sunflower font-bold text-[23px] hover:bg-gray-50 transition-colors"
                       }
                     />
                   </div>

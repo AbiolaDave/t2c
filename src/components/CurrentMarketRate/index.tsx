@@ -57,9 +57,9 @@ const CurrentMarketRate = ({
   return (
     <div
       id="main"
-      className=" flex flex-col  items-center justify-center overflow-x-hidden p-2 bg-[#F6FFFC]  font-sans -ml-8 md:ml-0  lg:ml-0 -mt-30 lg:-mt-5 z-50 pb-30 pt-40 max-w-[1600px]"
+      className=" flex flex-col  items-center justify-center overflow-x-hidden p-4 bg-[#F6FFFC] font-sans -ml-8 md:ml-0  lg:ml-0 -mt-30 lg:-mt-5 z-50 pb-30 pt-40 max-w-[1600px]"
     >
-      <div className="flex flex-col md:flex-row md:gap-3 lg:gap-10 justify-between items-center w-272.5 md:w-160 lg:w-full lg:justify-between">
+      <div className="flex flex-col md:flex-row md:gap-3 lg:gap-10 justify-between items-center w-272.5 md:w-160 lg:w-full lg:justify-center 2xl:justify-around">
         <div className="md:ml-0 -ml-20">
           <h1 className="text-[27.24px]/[24.97px] lg:text-[48px]/[44px] font-light font-sunflower max-w-[170px] lg:max-w-69.75 text-[#0F1729]">
             Current Market Rates
@@ -67,7 +67,7 @@ const CurrentMarketRate = ({
           <p className="font-inter font-medium text-[14px] text-[#94A3B8] mt-5">
             Amount to Send
           </p>
-          <div className=" w-60 md:w-70.25 mt-3 h-15 md:h-20">
+          <div className="relative w-60 md:w-70.25 mt-3 h-15 md:h-20">
             {/* Styled display */}
             <div className="pointer-events-none absolute inset-0 flex justify-between items-center px-5">
               <div>
@@ -210,15 +210,15 @@ const CurrentMarketRate = ({
         />
       </div>
 
-      <div className="lg:w-full overflow-x-hidden overflow-y-hidden mt-10 lg:mt-0 font-sans [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] relative z-50">
+      <div className="w-screen lg:w-full overflow-x-hidden mt-10 lg:mt-0 p-4  ml-8 md:ml-12 font-sans lg:ml-50 ">
         <div className="">
           <h1 className="font-sunflower text-[#0F1729] font-light text-[40px]/[38.16px]  lg:text-[71px]/[67px] max-w-125">
             Trends
           </h1>
         </div>
 
-        <div className="flex flex-col-reverse lg:flex-row px-2 gap-6 md:gap-10 mt-5 max-w-[1600px]  2xl:max-w-full">
-          <div className="flex-1  lg:h-100.5 rounded-[14px] bg-white border border-[#E1E7EF80] p-4">
+        <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-3 lg:gap-10 mt-10 2xl:max-w-full 2xl:gap-50">
+          <div className="md:w-120 lg:w-187 md:h-100.5 rounded-[14px] bg-white border border-[#E1E7EF80] p-4 relative z-30">
             <div className="flex items-center gap-2">
               <div className="w-11.5 h-11.5 rounded-[50%] overflow-hidden">
                 <Image
