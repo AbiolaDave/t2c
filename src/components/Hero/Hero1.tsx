@@ -197,7 +197,7 @@ const Hero1 = () => {
                     <ArrowLeftRight className="hidden lg:block" size={30} />
                     <ArrowUpDown size={25} className="block lg:hidden" />
                   </button> */}
-                  <div className="lg:mt-6 z-10 -ml-10  -mt-3 lg:-ml-10 w-[0px] h-[0px]">
+                  <div className="lg:-mt-6 z-10 -ml-10  -mt-3 lg:-ml-10 w-[0px] lg:h-[full] h-[0px]">
                     <button
                       onClick={swapCurrencies}
                       className="border-3 w-11.75 h-11.75 lg:w-13.75 lg:h-13.75 rounded-full flex flex-col justify-center cursor-pointer items-center border-[#EBEBEB] bg-black text-white"
