@@ -138,9 +138,9 @@ const UpperFooter = () => {
             <p className="font-sunflower font-bold text-[13px] lg:text-[30px] text-white">
               Contact
             </p>
-            <h1 className="font-inter font-medium text-[12px] lg:text-[20px] text-[#989898]">
+            {/* <h1 className="font-inter font-medium text-[12px] lg:text-[20px] text-[#989898]">
               +1 0000 00000 000
-            </h1>
+            </h1> */}
             <h1 className="font-inter font-medium text-[12px] lg:text-[20px] text-[#989898]">
               hello@tap2compare.com
             </h1>
@@ -305,9 +305,9 @@ const UpperFooter = () => {
           </div>
           <div className="flex justify-evenly gap-20 items-center">
             <div>
-              <h1 className="text-white text-[10px]">
+              {/* <h1 className="text-white text-[10px]">
                 A product of Tap2Compare
-              </h1>
+              </h1> */}
             </div>
             <div>
               <h1 className="text-white text-[10px]">

@@ -24,7 +24,6 @@ const MobileFooter = () => {
 
   return (
     <>
-     
       <div className="relative overflow-hidden w-full h-140  lg:h-235.5 bg-black p-4 mt-0 font-sans">
         <div>
           <Image
@@ -133,9 +132,9 @@ const MobileFooter = () => {
               <p className="font-sunflower text-white text-[13px] lg:text-[30px] font-bold">
                 Contact
               </p>
-              <p className="text-[#989898] text-[12px] lg:text-[20px]">
+              {/* <p className="text-[#989898] text-[12px] lg:text-[20px]">
                 +1 0000 00000 000
-              </p>
+              </p> */}
               <p className="text-[#989898] text-[12px] lg:text-[20px]">
                 hello@tap2compare.com
               </p>
@@ -245,9 +244,7 @@ const MobileFooter = () => {
         </div>
         <div className="flex flex-col lg:hidden justify-evenly items-center mt-5 mb-10">
           <div className="flex gap-5">
-            <div
-              className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 border-white"
-            >
+            <div className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 border-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -258,9 +255,7 @@ const MobileFooter = () => {
               </svg>
             </div>
 
-            <div
-              className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 bg-black border-white overflow-hidden"
-            >
+            <div className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 bg-black border-white overflow-hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 320 512"
@@ -274,18 +269,14 @@ const MobileFooter = () => {
               </svg>
             </div>
 
-            <div
-              className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 border-white"
-            >
+            <div className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 border-white">
               <FontAwesomeIcon
                 icon={faXTwitter}
                 className="text-[14px] sm:text-[20px] text-white"
               />
             </div>
 
-            <div
-              className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 border-white"
-            >
+            <div className="border rounded-full flex justify-center items-center h-7 w-7 sm:h-8.25 sm:w-8.25 border-white">
               <FontAwesomeIcon
                 icon={faInstagram}
                 className="text-[14px] sm:text-[20px] text-white"
@@ -293,11 +284,6 @@ const MobileFooter = () => {
             </div>
           </div>
           <div className="flex justify-evenly mt-3 gap-20 items-center">
-            <div>
-              <h1 className="text-white text-[10px]">
-                A product of Tap2Compare
-              </h1>
-            </div>
             <div>
               <h1 className="text-white text-[10px]">
                 © 2026 Tap2Compare. All rights reserved.
